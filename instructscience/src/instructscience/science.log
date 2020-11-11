@@ -4127,3 +4127,37 @@ ValueError: The view blog.views.SubscriptionCreate didn't return an HttpResponse
 [11/Nov/2020 18:25:19] WARNING [django.server:154] "GET /socketcluster/ HTTP/1.1" 404 2510
 [11/Nov/2020 18:26:19] WARNING [django.request:228] Not Found: /socketcluster/
 [11/Nov/2020 18:26:19] WARNING [django.server:154] "GET /socketcluster/ HTTP/1.1" 404 2510
+[11/Nov/2020 20:05:52] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
+[11/Nov/2020 20:05:59] INFO [django.server:154] "GET / HTTP/1.1" 200 18464
+[11/Nov/2020 20:06:00] INFO [django.server:154] "GET /media/filer_public/98/28/9828f06e-bf8a-4236-b825-9a8104121094/1.png HTTP/1.1" 200 77693
+[11/Nov/2020 20:06:00] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140936
+[11/Nov/2020 20:06:00] WARNING [django.request:228] Not Found: /images/inact_ml.png
+[11/Nov/2020 20:06:00] WARNING [django.request:228] Not Found: /images/inact_ai.png
+[11/Nov/2020 20:06:00] WARNING [django.request:228] Not Found: /images/inact_gen.png
+[11/Nov/2020 20:06:00] WARNING [django.server:154] "GET /images/inact_gen.png HTTP/1.1" 404 2528
+[11/Nov/2020 20:06:00] WARNING [django.server:154] "GET /images/inact_ml.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:06:00] WARNING [django.server:154] "GET /images/inact_ai.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:06:00] WARNING [django.request:228] Not Found: /images/inact_qc.png
+[11/Nov/2020 20:06:00] WARNING [django.server:154] "GET /images/inact_qc.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:06:00] WARNING [django.request:228] Not Found: /images/inact_cc.png
+[11/Nov/2020 20:06:00] WARNING [django.server:154] "GET /images/inact_cc.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:06:00] WARNING [django.request:228] Not Found: /images/car-left.png
+[11/Nov/2020 20:06:00] WARNING [django.server:154] "GET /images/car-left.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:06:00] INFO [django.server:154] "GET /static/instructscience/images/social.png HTTP/1.1" 200 824114
+[11/Nov/2020 20:06:00] WARNING [django.request:228] Not Found: /images/car-right.png
+[11/Nov/2020 20:06:00] WARNING [django.server:154] "GET /images/car-right.png HTTP/1.1" 404 2528
+[11/Nov/2020 20:06:00] INFO [django.server:154] "GET /static/instructscience/images/atom-icon.png HTTP/1.1" 200 1556299
+[11/Nov/2020 20:08:08] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
+[11/Nov/2020 20:08:21] INFO [django.server:154] "GET / HTTP/1.1" 200 18464
+[11/Nov/2020 20:08:21] WARNING [django.request:228] Not Found: /images/inact_ai.png
+[11/Nov/2020 20:08:21] WARNING [django.request:228] Not Found: /images/inact_ml.png
+[11/Nov/2020 20:08:21] WARNING [django.server:154] "GET /images/inact_ai.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:08:21] WARNING [django.server:154] "GET /images/inact_ml.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:08:21] WARNING [django.request:228] Not Found: /images/inact_cc.png
+[11/Nov/2020 20:08:21] WARNING [django.server:154] "GET /images/inact_cc.png HTTP/1.1" 404 2525
+[11/Nov/2020 20:08:22] WARNING [django.request:228] Not Found: /images/inact_gen.png
+[11/Nov/2020 20:08:22] WARNING [django.server:154] "GET /images/inact_gen.png HTTP/1.1" 404 2528
+[11/Nov/2020 20:08:22] WARNING [django.request:228] Not Found: /images/car-left.png
+[11/Nov/2020 20:08:22] WARNING [django.request:228] Not Found: /images/car-right.png
+[11/Nov/2020 20:08:22] WARNING [django.server:154] "GET /images/car-right.png HTTP/1.1" 404 2528
+[11/Nov/2020 20:08:22] WARNING [django.server:154] "GET /images/car-left.png HTTP/1.1" 404 2525

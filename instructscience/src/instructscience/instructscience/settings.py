@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'insc',
-        'USER': 'insc_root',
-        'PASSWORD': 'd3d01e70a29c0f39842cd0c257fb5db9',
-        'HOST': 'localhost',
+        'NAME': 'hxxfmhng',
+        'USER': 'hxxfmhng',
+        'PASSWORD': 'An_3OCfa0Ym9-S947GKIYmqDOsi1dSQc',
+        'HOST': 'satao.db.elephantsql.com',
         'PORT': '5432',
     }
 }
