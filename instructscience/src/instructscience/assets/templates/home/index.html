@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block meta_tags %}
+{# metatags goes here #}
+{% endblock %}
+{% block content %}
+<!-- Banner section starts here -->
+<section id="Banner-sec" class="container-fluid">
+  <div class="row">
+    <div id="Banner-carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for obj in banners %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}" id="car-{{forloop.counter}}">
+          <div class="row auth-wrapper">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 auth-img-wrapper">
+              <img src="{{obj.desktop_banner_avatar.url}}" alt="Author" class="img-fluid">
+            </div>
+            <div class="col-lg-9 col-md-6 col-sm-12 col-xs-12 auth-cont-wrapper">
+              <h2>{{obj.banner_title}}</h2>
+              {{obj.description|safe}}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% comment %}
+        <div class="carousel-item" id="car-2">
+          <div class="row auth-wrapper">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 auth-img-wrapper">
+              <img src="{% static 'instructscience/images/1.jpeg' %}" alt="Author" class="img-fluid">
+            </div>
+            <div class="col-lg-9 col-md-6 col-sm-12 col-xs-12 auth-cont-wrapper">
+              <h2>A Keen Science Enthusiast</h2>
+              <h3>"Being Aware of Nature and Science is as important as breathing". Always been a curious explore of
+                the World around me.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" id="car-3">
+          <div class="row auth-wrapper">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 auth-img-wrapper">
+              <img src="{% static 'instructscience/images/1.jpeg' %}" alt="Author" class="img-fluid">
+            </div>
+            <div class="col-lg-9 col-md-6 col-sm-12 col-xs-12 auth-cont-wrapper">
+              <h2>Responsible Citizen</h2>
+              <h3>Constantly Interacting with the youth of the country to create awareness through Instruct Sciene.
+              </h3>
+            </div>
+          </div>
+        </div>
+        {% endcomment %}
+      </div>
+      <a class="carousel-control-prev" href="#Banner-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#Banner-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="down-arrow">
+      <img src="{% static 'instructscience/images/arrow_down.png' %}" alt="down-arrow">
+            </div>
+          </div>
+</section>
+<!-- Banner section ends here -->
+
+<!-- Expertise section starts here -->
+<section id="expertise" class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="expertise-head-wrapper">
+        <h2>Expertise</h2>
+        <p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+          explicabo. Nemo enim ipsam</p>
+      </div>
+      <div class="expertise-tab-wrapper">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="qc-tab" data-toggle="tab" href="#qc" role="tab" aria-controls="qc" aria-selected="true" style="background-image:url('images/inact_qc.png')">Quantum Computing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ai-tab" data-toggle="tab" href="#ai" role="tab" aria-controls="ai" aria-selected="false" style="background-image:url('images/inact_ai.png')">Artificial intelligence</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ml-tab" data-toggle="tab" href="#ml" role="tab" aria-controls="ml" aria-selected="false" style="background-image:url('images/inact_ml.png')">Machine learning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="genetics-tab" data-toggle="tab" href="#genetics" role="tab" aria-controls="genetics" aria-selected="false" style="background-image:url('images/inact_gen.png')">Genetics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="cloud-tab" data-toggle="tab" href="#cloud" role="tab" aria-controls="cloud" aria-selected="false" style="background-image:url('images/inact_cc.png')">Cloud computing</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="qc" role="tabpanel" aria-labelledby="qc-tab">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+              sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+              incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+              exercitationem ullam</p>
+          </div>
+          <div class="tab-pane fade" id="ai" role="tabpanel" aria-labelledby="ai-tab">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+              sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+              incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+              exercitationem ullam</p>
+          </div>
+          <div class="tab-pane fade" id="ml" role="tabpanel" aria-labelledby="ml-tab">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+              sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+              incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+              exercitationem ullam</p>
+          </div>
+          <div class="tab-pane fade" id="genetics" role="tabpanel" aria-labelledby="genetics-tab">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+              sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+              incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+              exercitationem ullam</p>
+          </div>
+          <div class="tab-pane fade" id="cloud" role="tabpanel" aria-labelledby="cloud-tab">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+              sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+              incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+              exercitationem ullam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Expertise section ends here -->
+
+<!-- social media section starts here -->
+
+<section id="social-twitter" class="container-fluid p-0">
+  <div class="row">
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 p-0 twitter-img-wrapper">
+      <img src="{% static 'instructscience/images/social.png' %}" alt="Twitter">
+    </div>
+    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+      <div class="owl-carousel" id="social-carousel">
+        <div>
+          <a href="https://twitter.com/home?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @home</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div>
+          <div class="fb-page" data-href="https://www.facebook.com/jobsforunemployedyouth/" data-tabs="timeline" data-width="" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true"
+            data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/jobsforunemployedyouth/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jobsforunemployedyouth/">Karnataka Govt Job Updates</a></blockquote>
+          </div>
+        </div>
+        <div>
+          <a href="https://twitter.com/home?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @home</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- social media section ends here -->
+
+<!-- inspired by section starts here -->
+
+<section id="inspired" class="container-fluid">
+  <div class="container">
+    <h2>Inspired By</h2>
+    <div class="row main-row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-12 video-caro--main">
+        <div class='slick-carousel slide-main'>
+          <div>
+            <iframe width="100%" height="455" src="https://www.youtube.com/embed/m_bmb4GUbrE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div>
+            <iframe width="100%" height="455" src="https://www.youtube.com/embed/m_bmb4GUbrE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div>
+            <iframe width="100%" height="455" src="https://www.youtube.com/embed/m_bmb4GUbrE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div>
+            <iframe width="100%" height="455" src="https://www.youtube.com/embed/m_bmb4GUbrE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div>
+            <iframe width="100%" height="455" src="https://www.youtube.com/embed/m_bmb4GUbrE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class='slick-carousel slide-nav'>
+          <div>
+            <img src="{% static 'instructscience/images/atom-icon.png' %}" alt="inspired-by-1" class="img-fluid">
+          </div>
+          <div>
+            <img src="{% static 'instructscience/images/atom-icon.png' %}" alt="inspired-by-1" class="img-fluid">
+          </div>
+          <div>
+            <img src="{% static 'instructscience/images/atom-icon.png' %}" alt="inspired-by-1" class="img-fluid">
+          </div>
+          <div>
+            <img src="{% static 'instructscience/images/atom-icon.png' %}" alt="inspired-by-1" class="img-fluid">
+          </div>
+          <div>
+            <img src="{% static 'instructscience/images/atom-icon.png' %}" alt="inspired-by-1" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row load--more">
+      <a href="inspire.html">Load More</a>
+    </div>
+  </div>
+</section>
+<!-- inspired by section ends here -->
+
+{% endblock %}
+{% block scripts_page_specific %}
+{% endblock %}

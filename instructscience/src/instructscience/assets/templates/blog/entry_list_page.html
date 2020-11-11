@@ -1,0 +1,49 @@
+{% load static %}
+{% load filters %}
+{% load static thumbnail %}
+{% load el_pagination_tags  %}
+
+{% if feature|featured:True %}
+{% with total=feature|slice:"1:" %}
+{% paginate 3 total %}
+{% for obj in total %}
+<div class="card--section--two mb-5">
+  <div class="card--type--two">
+    <div class="row">
+      <div class="card-img col-12 col-sm-12 col-md-12 col-lg-5 p-0">
+        <a href="blogdetails.html" class="read--more">
+          <div class="card--img h-100" style="background: url('{{obj.blog_image.url}}');">
+          </div>
+        </a>
+      </div>
+      <div class="card-body col-12 col-sm-12 col-md-12 col-lg-7 p-0 card--one  bg-1">
+        <div class="card-content--one h-100  justify-content-between">
+          <div class="sec--con--one w-100">
+            <div class="top--wrapper">
+              <span class="area">{{obj.blog_topic.blog_category}}</span>
+            </div>
+            <div class="inner--content">
+              <h4>
+                <a href="blogdetails.html">{{obj.blog_title}}
+                </a>
+              </h4>
+              <p dir="ltr">{{obj.blog_short_description}}</p>
+              <div>
+                <a href="{% url 'blog:blog_details' slug=obj.slug %}" class="read--more">Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<!-- <a href="javascript:void(0)" class="load--more"> -->
+<div class="load--more">
+  {% show_more "Load More" %}
+</div>
+<!-- </a> -->
+{% endwith %}
+{% endif %}

@@ -1,0 +1,359 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+{% load filters %}
+
+{% block meta_tags %}
+{# metatags goes here #}
+{% endblock %}
+{% block css %}
+<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+<link rel="stylesheet" href="{% static 'instructscience/css/easyzoom.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/bootstrap-datetimepicker.min.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/bootstrap-select.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/fontawesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/blogs.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/mason.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/inspire.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-fluid relative" id="banner--wrapper" style="background:url('{% static 'instructscience/images/blog--banner.png' %}');">
+  <div class="row h-100">
+    <div class="container align-self-center">
+      <div class="banner--content text-center">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>consectetur adipiscing elit Phasellus consectetur, lorem quis <br>
+          sodales amet, consectetur adipiscing. Maecenas vehicula tempus</p>
+        <div class="btn-arrow">
+          <img src="images/ic_scroll down.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="news--details--wrapper">
+  <div class="container">
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+        <div class="row">
+          <div class="wrapper--one">
+            <h4>Topics</h4>
+            <div class="form">
+              <div class="btn-group flex-wrap" role="group" aria-label="Basic example">
+                {% for obj in topic %}
+                <a href="#" class="btn btn-city{% if forloop.first%}-active{% endif %}" type="submit">{{obj.topic}}</a>
+                {% endfor %}
+                {% comment %}
+                <a href="#" class="btn btn-city" type="submit">Blog2</a>
+                <a href="#" class="btn btn-city-active" type="submit">Blog3</a>
+                <a href="#" class="btn btn-city" type="submit">Blog4</a>
+                {% endcomment %}
+              </div>
+            </div>
+          </div>
+
+
+          <div class="wrapper--one--two mb-3">
+            {% for obj in feature|featured:True|slice:":1" %}
+            <div class="card--section--one  mb-5">
+              <div class="card--type--one">
+                <a href="#">
+                  <img src="{{obj.blog_image.url}}" class="img-fluid" alt="Town">
+                </a>
+                <div class="card-content--one d-flex justify-content-between">
+                  <div class="sec--con--one">
+                    <h4>
+                      <a href="{% url 'blog:blog_details' slug=obj.slug %}">
+                        {{obj.blog_title}}
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="sec--con--two align-self-end">
+                    <a href="{% url 'blog:blog_details' slug=obj.slug %}" class="read--more">Read More<i><img src="images/nxttwo.png"
+                          alt=""></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            {% include page_template %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Ends Here -->
+      <!-- Right Column -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-12 right--bar">
+        <div class="rightbar--one mb-5">
+          <form autocomplete="off" method="GET" action="#">
+            <div class="autocomplete form-group">
+              <input id="myInput" class="form-control txtSearch" id="txtSearch" type="text" name="txtSearch"
+                placeholder="Search"></div>
+            <input type="submit" class="btn btn-default btn-search-two" value="Search">
+          </form>
+        </div>
+        <div class="blog-category mb-5">
+          <h3>Category</h3>
+          <div class="category--content">
+            <ul class="nav">
+              {% for obj in category %}
+              <li><a href="#" class="btn btn-cat{% if forloop.first %}-active{% endif %}">{{obj.category}}</a></li>
+              {% endfor %}
+              {% comment %}
+              <li><a href="#" class="btn ">Category2</a></li>
+              <li><a href="#" class="btn ">Category3</a></li>
+              <li><a href="#" class="btn ">Category4</a></li>
+              <li><a href="#" class="btn ">Category5</a></li>
+              {% endcomment %}
+            </ul>
+          </div>
+
+        </div>
+        <div class="recent--blogs mb-5">
+          <h3>Most Recent</h3>
+          <div class="blogs--content">
+              {% for obj in recent %}
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">{{ obj.content_published_date|timesince }} ago</span></h5>
+              <p><a href="{% url 'blog:blog_details' slug=obj.slug %}">{{obj.blog_title}}</a></p>
+            </div>
+              {% endfor %}
+            {% comment %}
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 3 weeks ago</span></h5>
+              <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo rem.</a></p>
+            </div>
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">3 months, 4 weeks ago</span></h5>
+              <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo rem.</a></p>
+            </div>
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 4 weeks ago</span></h5>
+              <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo rem.</a></p>
+            </div>
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 4 weeks ago</span></h5>
+              <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo rem.</a></p>
+            </div>
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 3 weeks ago</span></h5>
+              <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo rem.</a></p>
+            </div>
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 4 weeks ago</span></h5>
+              <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo rem.</a></p>
+            </div>
+            <div class="blog-row mb-5">
+              <h5><span class="blog--color blog">Blog</span> | <span class="days">3 months ago</span></h5>
+              <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo rem.</a></p>
+            </div>
+            {% endcomment %}
+          </div>
+        </div>
+      </div>
+      <!-- Ends Here -->
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="related-section-wrapper">
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center">Related Blog</h3>
+          <div class="owl-carousel" id="related">
+            {% for obj in recent %}
+            <div class="related--block">
+              <a href="{% url 'blog:blog_details' slug=obj.slug %}"><img src="{{obj.blog_image.url}}" class="img-fluid " alt=""></a>
+              <div class="related--content">
+                <a href="{% url 'blog:blog_details' slug=obj.slug %}">
+                  <p>{{obj.blog_title}}</p>
+                </a>
+                <a href="{% url 'blog:blog_details' slug=obj.slug %}" class="read--moer">Read More</a>
+              </div>
+            </div>
+            {% endfor %}
+            {% comment %}
+            <div class="related--block">
+              <a href="#"><img src="images/blog2.png" class="img-fluid " alt=""></a>
+              <div class="related--content">
+                <a href="#">
+                  <p>How frequently should you clean the air ducts at your office?</p>
+                </a>
+                <a href="#" class="read--moer">Read More</a>
+              </div>
+            </div>
+            <div class="related--block">
+              <a href="#"><img src="images/blog3.png" class="img-fluid " alt=""></a>
+              <div class="related--content">
+                <a href="#">
+                  <p>Effect of COVID-19 on future buildings</p>
+                </a>
+                <a href="#" class="read--moer">Read More</a>
+              </div>
+            </div>
+            <div class="related--block">
+              <a href="#"><img src="images/blog1.png" class="img-fluid " alt=""></a>
+              <div class="related--content">
+                <a href="index.html">
+                  <p>5 evidences why you should increase ventilation in your buildings</p>
+                </a>
+                <a href="#" class="read--moer">Read More</a>
+              </div>
+            </div>
+            <div class="related--block">
+              <a href="#"><img src="images/blog2.png" class="img-fluid " alt=""></a>
+              <div class="related--content">
+                <a href="#">
+                  <p>Importance of healthy buildings during COVID-19</p>
+                </a>
+                <a href="#" class="read--moer">Read More</a>
+              </div>
+            </div>
+            <div class="related--block">
+              <a href="#"><img src="images/blog3.png" class="img-fluid " alt=""></a>
+              <div class="related--content">
+                <a href="#">
+                  <p>Singapore New healthcare measure to Fight COVID - 19</p>
+                </a>
+                <a href="#" class="read--moer">Read More</a>
+              </div>
+            </div>
+            <div class="related--block">
+              <a href="#"><img src="images/blog1.png" class="img-fluid " alt=""></a>
+              <div class="related--content">
+                <a href="../what-will-take-reopen-singapores-economy/index.html">
+                  <p>What will take to reopen Singapore&#39;s economy</p>
+                </a>
+                <a href="#" class="read--moer">Read More</a>
+              </div>
+            </div>
+            {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="section--wrapper--two">
+  <div class="row">
+    <div class="container">
+      <div class="row text-center justify-content-center">
+        <div class="col-12 col-lg-7 col-md-9">
+          <div class="subscribe--form">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Get the latest resources and news to reinforce your commitment
+              towards creating healthier and sustainable buildings.</p>
+            <form class="banner-form subscribe_form">
+              <div class="input-group"><input type="email" class="form-control" id='business_email' name="email"
+                  placeholder="Your Email Address"><button class="btn btn-search--three" id="submit_subscribe"
+                  type="submit" name='button'>Submit</button></div>
+              <div class="d-flex subscribe--row justify-content-between mt-4">
+                <div class="d-flex">
+                  <div class="form-group "><input type="checkbox" id="Weekly" name='notification'
+                      class="notification Weekly" value="Weekly"><label for="Weekly">Weekly</label></div>
+                  <div class="form-group"><input type="checkbox" id="Monthly" name='notification'
+                      class="notification Monthly" value="Monthly"><label for="Monthly">Monthly</label></div>
+                </div>
+                <div class="sub">
+                  <p class="m-0"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="socila--feed-wrapper">
+  <div class="container">
+    <h3 class="text-center">Social Media</h3>
+    <div class="row mt-5">
+      <div class="col-md-4 col-12 col-12 col-sm-12 col-lg-4">
+        <div class="feed--wrapper">
+          <a class="twitter-timeline" data-height="200" href="https://twitter.com/BatsouElef">Tweets by
+            BatsouElef</a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 col-12 col-sm-12 col-lg-4">
+        <div class="feed--wrapper">
+          <div class="fb-page" data-href="https://www.facebook.com/jobsforunemployedyouth/" data-tabs="timeline"
+            data-width="" data-height="200" data-small-header="true" data-adapt-container-width="true"
+            data-hide-cover="true" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/jobsforunemployedyouth/" class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/jobsforunemployedyouth/">Karnataka Govt Job Updates</a></blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 col-12 col-sm-12 col-lg-4">
+        <div class="feed--wrapper">
+          <a class="twitter-timeline" data-height="200" href="https://twitter.com/BatsouElef">Tweets by
+            BatsouElef</a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts_page_specific %}
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#submit_subscribe').on('click',function(){
+     $(".subscribe_form").validate({
+     errorElement: "div",
+     ignore:'',
+     rules: {
+       email: {
+         required: true,
+        email: true
+       },
+       notification: {
+         required: true
+       },
+     },
+     submitHandler:function(form){
+     email = $('#business_email').val()
+     new_update = $("input[name='notification']:checked").val()
+
+     jQuery.ajax({
+       type: "POST",
+       url: '/blog/subscribe/',
+       data: {
+         'email_id':email,
+         'notification':new_update,
+         'csrfmiddlewaretoken': '{{ csrf_token }}'
+       },
+       mimeType: "multipart/form-data",
+       contentType: false,
+       success: function (data) {
+          $(".subscribe_form")[0].reset();
+          // $('#optradio-error').show();
+          // $('#optradio-error').text(data.erro_message);
+          // $('#optradio-error').fadeOut(3000);
+          var messageVar = data.message
+          var optionHtml = '';
+          if(messageVar.length>0){
+                 optionHtml+= '<p class="m-0">'+messageVar+'</p>';
+          }
+          if(optionHtml !=''){
+              $('.sub').html(optionHtml);
+          }
+        },
+
+     });
+    }
+   });
+});
+});
+</script>
+{% endblock %}

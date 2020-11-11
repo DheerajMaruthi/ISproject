@@ -1,0 +1,206 @@
+/* Introduction section style starts here */
+#videos-intro h2
+{
+  text-align: center;
+  padding: 30px 0px 10px 0px;
+  margin: 0;
+  width: 100%;
+}
+#videos-intro p
+{
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+}
+/* Introduction section style ends here */
+
+
+/* Video inspiration section starts here */
+#inspired-videos h2
+{
+  padding-bottom: 20px;
+}
+#inspired-videos .video-head-wrapper
+{
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 25px;
+}
+#inspired-videos .video-head-wrapper .videos--sort select
+{
+  padding: 8px 50px 8px 0px;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  -webkit-appearance:none;
+  background-image: url("../images/dropdown.png");
+  background-repeat: no-repeat;
+  background-position: 75px 18px;
+}
+#inspired-videos .videos-row .video-wrapper
+{
+  background-color: #fff;
+  box-shadow: 0px 6px 12px #00000029;
+}
+#inspired-videos .videos-row .video-wrapper h2
+{
+  font-size: 20px;
+  margin: 0;
+  padding:20px;
+}
+#inspired-videos .videos-row .video-wrapper p
+{
+  font-size: 20px;
+  padding: 0px 20px 20px 20px;
+}
+#inspired-videos .videos-row .video-wrapper p a
+{
+  color: #000;
+  border-bottom: 2px solid #AB4742;
+  padding-bottom: 4px;
+  background-image: url(../images/lan-arrow.png);
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 55px 6px;
+  width: 18%;
+  text-decoration: none;
+}
+#inspired-videos .videos-row .video-wrapper p a:hover
+{
+  transition: 0.3s ease-in;
+  background-position: 60px 6px;
+  width: 20%;
+}
+/* Video inspiration section ends here */
+
+/* Books inspiration section starts here */
+#inspired-books
+{
+  background-color: #fff;
+  padding-top: 30px;
+}
+#inspired-books h2
+{
+  padding-bottom: 20px;
+}
+#inspired-books .video-head-wrapper
+{
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 25px;
+}
+#inspired-books .video-head-wrapper .videos--sort select
+{
+  padding: 8px 50px 8px 0px;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  -webkit-appearance:none;
+  background-image: url("../images/dropdown.png");
+  background-repeat: no-repeat;
+  background-position: 75px 18px;
+}
+#inspired-books .videos-row .video-wrapper
+{
+  background-color: #fff;
+  box-shadow: 0px 6px 12px #00000029;
+}
+#inspired-books .videos-row .video-wrapper h2
+{
+  font-size: 20px;
+  margin: 0;
+  padding:20px;
+}
+#inspired-books .videos-row .video-wrapper p
+{
+  font-size: 20px;
+  padding: 0px 20px 20px 20px;
+}
+#inspired-books .videos-row .video-wrapper p a
+{
+  color: #000;
+  border-bottom: 2px solid #AB4742;
+  padding-bottom: 4px;
+  background-image: url(../images/lan-arrow.png);
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 55px 6px;
+  width: 18%;
+  text-decoration: none;
+}
+#inspired-books .videos-row .video-wrapper p a:hover
+{
+  transition: 0.3s ease-in;
+  background-position: 60px 6px;
+  width: 20%;
+}
+/* Books inspiration section ends here */
+
+/* Quotes inspiration section starts here */
+#inspired-quotes
+{
+  padding-top: 30px;
+}
+#inspired-quotes h2
+{
+  padding-bottom: 20px;
+}
+#inspired-quotes .video-head-wrapper
+{
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 25px;
+}
+#inspired-quotes .video-head-wrapper .videos--sort select
+{
+  padding: 8px 50px 8px 0px;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  -webkit-appearance:none;
+  background-image: url("../images/dropdown.png");
+  background-repeat: no-repeat;
+  background-position: 75px 18px;
+}
+#inspired-quotes .videos-row .video-wrapper
+{
+  background-color: #fff;
+  box-shadow: 0px 6px 12px #00000029;
+}
+#inspired-quotes .videos-row .video-wrapper h2
+{
+  font-size: 20px;
+  margin: 0;
+  padding:20px;
+}
+#inspired-quotes .videos-row .video-wrapper p
+{
+  font-size: 20px;
+  padding: 0px 20px 20px 20px;
+}
+#inspired-quotes .videos-row .video-wrapper p a
+{
+  color: #000;
+  border-bottom: 2px solid #AB4742;
+  padding-bottom: 4px;
+  background-image: url(../images/lan-arrow.png);
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 55px 6px;
+  width: 18%;
+  text-decoration: none;
+}
+#inspired-quotes .videos-row .video-wrapper p a:hover
+{
+  transition: 0.3s ease-in;
+  background-position: 60px 6px;
+  width: 20%;
+}
+/* Quotes inspiration section ends here */

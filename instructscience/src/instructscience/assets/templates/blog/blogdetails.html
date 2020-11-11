@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block meta_tags %}
+{# metatags goes here #}
+{% endblock %}
+{% block css %}
+<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+<link rel="stylesheet" href="{% static 'instructscience/css/easyzoom.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/bootstrap-datetimepicker.min.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/bootstrap-select.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/fontawesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/blogs.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/mason.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/inspire.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-fluid p-0" id="news--banner">
+   <div class="row news--banner">
+      <img src="{% static 'instructscience/images/blogdeatailsbanner.png' %}" alt="details1" class="img-fluid w-100" alt="">
+      <div class="icon-bar">
+         <a href="#" target="_blank" class="facebook"><img src="{% static 'instructscience/images/n-fb.png' %}" alt=""></a>
+         <a href="#" class="twitter" target="_blank"><img src="{% static 'instructscience/images/n-tw.png' %}" alt=""></a>
+         <a href="#" target="_blank" class="linkedin"><img src="{% static 'instructscience/images/n-in.png' %}" alt=""></a>
+         <a href="mailto:#" target="_blank" class="msger"><img src="{% static 'instructscience/images/n-msg.png' %}" alt=""></a></div>
+   </div>
+</div>
+
+
+<div class="container-fluid" id="news--details--wrapper">
+   <div class="container">
+      <div class="row">
+         <!-- Left Column -->
+         <div class="col-lg-8 col-md-8 col-sm-12 col-12 left--news--bar">
+            <div class="news--white  mb-4 news-main-con">
+               <h3>{{blog_object.blog_title}}</h3>
+               <div class="d-flex neww--dea justify-content-between flex-wrap">
+                  <p class="news-d"><span>{{obj.blog_topic.blog_category}}</span> <span>{{obj.blog_topic}}</span></p>
+                  <p class="date-n"><span>Date</span>: {{blog_object.content_published_date|date:"F d, Y, P"}}</p>
+               </div>
+            </div>
+            <div class="news--white news--main--deatail">
+              {{blog_object.blog_content|safe}}
+            </div>
+         </div>
+         <!-- Ends Here -->
+         <!-- Right Column -->
+         <div class="col-lg-4 col-md-4 col-sm-12 col-12 right--bar">
+            <div class="rightbar--one mb-5">
+               <form autocomplete="off" method="GET" action="#">
+                  <div class="autocomplete form-group">
+                     <input id="myInput" class="form-control txtSearch" id="txtSearch" type="text"
+                        name="txtSearch" placeholder="Search"></div>
+                  <input type="submit" class="btn btn-default btn-search-two" value="Search">
+               </form>
+            </div>
+            <div class="recent--blogs mb-5">
+               <h3>Most Recent</h3>
+               <div class="blogs--content">
+                 {% for obj in recent %}
+               <div class="blog-row mb-5">
+                 <h5><span class="blog--color blog">Blog</span> | <span class="days">{{ obj.content_published_date|timesince }} ago</span></h5>
+                 <p><a href="{% url 'blog:blog_details' slug=obj.slug %}">{{obj.blog_title}}</a></p>
+               </div>
+                 {% endfor %}
+                 {% comment %}
+                  <div class="blog-row mb-5">
+                     <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 3 weeks
+                           ago</span></h5>
+                     <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo
+                           rem.</a></p>
+                  </div>
+                  <div class="blog-row mb-5">
+                     <h5><span class="blog--color blog">Blog</span> | <span class="days">3 months, 4 weeks
+                           ago</span></h5>
+                     <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo
+                           rem.</a></p>
+                  </div>
+                  <div class="blog-row mb-5">
+                     <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 4 weeks
+                           ago</span></h5>
+                     <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo
+                           rem.</a></p>
+                  </div>
+                  <div class="blog-row mb-5">
+                     <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 4 weeks
+                           ago</span></h5>
+                     <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo
+                           rem.</a></p>
+                  </div>
+                  <div class="blog-row mb-5">
+                     <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 3 weeks
+                           ago</span></h5>
+                     <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo
+                           rem.</a></p>
+                  </div>
+                  <div class="blog-row mb-5">
+                     <h5><span class="blog--color blog">Blog</span> | <span class="days">2 months, 4 weeks
+                           ago</span></h5>
+                     <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo
+                           rem.</a></p>
+                  </div>
+                  <div class="blog-row mb-5">
+                     <h5><span class="blog--color blog">Blog</span> | <span class="days">3 months ago</span></h5>
+                     <p><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit nemo
+                           rem.</a></p>
+                  </div>
+                  {% endcomment %}
+               </div>
+            </div>
+         </div>
+         <!-- Ends Here -->
+      </div>
+   </div>
+</div>
+
+<div class="container-fluid" id="related-section-wrapper">
+   <div class="row">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <h3 class="text-center">Related Blog</h3>
+               <div class="owl-carousel" id="related">
+                  <div class="related--block">
+                     <a href="#"><img src="images/blog1.png" class="img-fluid " alt=""></a>
+                     <div class="related--content">
+                        <a href="#">
+                           <p>Will sanitizing one’s hands too many times have an adverse effect?</p>
+                        </a>
+                        <a href="#" class="read--moer">Read More</a>
+                     </div>
+                  </div>
+                  <div class="related--block">
+                     <a href="#"><img src="images/blog2.png" class="img-fluid " alt=""></a>
+                     <div class="related--content">
+                        <a href="#">
+                           <p>How frequently should you clean the air ducts at your office?</p>
+                        </a>
+                        <a href="#" class="read--moer">Read More</a>
+                     </div>
+                  </div>
+                  <div class="related--block">
+                     <a href="#"><img src="images/blog3.png" class="img-fluid " alt=""></a>
+                     <div class="related--content">
+                        <a href="#">
+                           <p>Effect of COVID-19 on future buildings</p>
+                        </a>
+                        <a href="#" class="read--moer">Read More</a>
+                     </div>
+                  </div>
+                  <div class="related--block">
+                     <a href="#"><img src="images/blog1.png" class="img-fluid " alt=""></a>
+                     <div class="related--content">
+                        <a href="index.html">
+                           <p>5 evidences why you should increase ventilation in your buildings</p>
+                        </a>
+                        <a href="#" class="read--moer">Read More</a>
+                     </div>
+                  </div>
+                  <div class="related--block">
+                     <a href="#"><img src="images/blog2.png" class="img-fluid " alt=""></a>
+                     <div class="related--content">
+                        <a href="#">
+                           <p>Importance of healthy buildings during COVID-19</p>
+                        </a>
+                        <a href="#" class="read--moer">Read More</a>
+                     </div>
+                  </div>
+                  <div class="related--block">
+                     <a href="#"><img src="images/blog3.png" class="img-fluid " alt=""></a>
+                     <div class="related--content">
+                        <a href="#">
+                           <p>Singapore New healthcare measure to Fight COVID - 19</p>
+                        </a>
+                        <a href="#" class="read--moer">Read More</a>
+                     </div>
+                  </div>
+                  <div class="related--block">
+                     <a href="#"><img src="images/blog1.png" class="img-fluid " alt=""></a>
+                     <div class="related--content">
+                        <a href="../what-will-take-reopen-singapores-economy/index.html">
+                           <p>What will take to reopen Singapore&#39;s economy</p>
+                        </a>
+                        <a href="#" class="read--moer">Read More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container-fluid" id="section--wrapper--two">
+   <div class="row">
+      <div class="container">
+         <div class="row text-center justify-content-center">
+            <div class="col-12 col-lg-7 col-md-9">
+               <div class="subscribe--form">
+                  <h2>Subscribe to our Newsletter</h2>
+                  <p>Get the latest resources and news to reinforce your commitment
+                     towards creating healthier and sustainable buildings.</p>
+                  <form class="banner-form subscribe_form" method="post" action='#'>
+                     <div class="input-group"><input type="email" class="form-control" id='business_email'
+                           name="email" placeholder="Your Email Address"><button class="btn btn-search--three"
+                           id="submit_subscribe" type="submit" name='button'>Submit</button></div>
+                     <div class="d-flex subscribe--row justify-content-between mt-4">
+                        <div class="d-flex">
+                           <div class="form-group "><input type="checkbox" id="Weekly" name='notification'
+                                 class="notification Weekly" value="Weekly"><label for="Weekly">Weekly</label>
+                           </div>
+                           <div class="form-group"><input type="checkbox" id="Monthly" name='notification'
+                                 class="notification Monthly" value="Monthly"><label for="Monthly">Monthly</label>
+                           </div>
+                        </div>
+                        <div class="sub">
+                           <p class="m-0">*Please verify your e-mail address</p>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container-fluid" id="socila--feed-wrapper">
+   <div class="container">
+      <h3 class="text-center">Social Media</h3>
+      <div class="row mt-5">
+         <div class="col-md-4 col-12 col-12 col-sm-12 col-lg-4">
+            <div class="feed--wrapper">
+               <a class="twitter-timeline" data-height="200" href="https://twitter.com/BatsouElef">Tweets by
+                  BatsouElef</a>
+               <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+         </div>
+         <div class="col-md-4 col-12 col-12 col-sm-12 col-lg-4">
+            <div class="feed--wrapper">
+               <div class="fb-page" data-href="https://www.facebook.com/jobsforunemployedyouth/"
+                  data-tabs="timeline" data-width="" data-height="200" data-small-header="true"
+                  data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                  <blockquote cite="https://www.facebook.com/jobsforunemployedyouth/"
+                     class="fb-xfbml-parse-ignore"><a
+                        href="https://www.facebook.com/jobsforunemployedyouth/">Karnataka Govt Job Updates</a>
+                  </blockquote>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4 col-12 col-12 col-sm-12 col-lg-4">
+            <div class="feed--wrapper">
+               <a class="twitter-timeline" data-height="200" href="https://twitter.com/BatsouElef">Tweets by
+                  BatsouElef</a>
+               <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</main>
+
+{% endblock %}
+{% block scripts_page_specific %}
+{% endblock %}
