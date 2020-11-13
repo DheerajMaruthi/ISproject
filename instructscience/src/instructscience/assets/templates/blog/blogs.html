@@ -250,7 +250,8 @@
             <h2>Subscribe to our Newsletter</h2>
             <p>Get the latest resources and news to reinforce your commitment
               towards creating healthier and sustainable buildings.</p>
-            <form class="banner-form subscribe_form">
+            <form class="banner-form subscribe_form" action="" method="post">
+              {% csrf_token %}
               <div class="input-group"><input type="email" class="form-control" id='business_email' name="email"
                   placeholder="Your Email Address"><button class="btn btn-search--three" id="submit_subscribe"
                   type="submit" name='button'>Submit</button></div>
@@ -331,10 +332,10 @@ $(document).ready(function() {
        data: {
          'email_id':email,
          'notification':new_update,
-         'csrfmiddlewaretoken': '{{ csrf_token }}'
+         'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val()
        },
-       mimeType: "multipart/form-data",
-       contentType: false,
+       // mimeType: "multipart/form-data",
+       // contentType: false,
        success: function (data) {
           $(".subscribe_form")[0].reset();
           // $('#optradio-error').show();

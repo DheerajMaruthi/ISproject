@@ -110,7 +110,7 @@ def Unsubscribe(request, email, hash):
 def autocompleteModel(request):
     if request.is_ajax():
         q = request.GET.get('term', '').capitalize()
-        search_qs = models.Articles.objects.filter(
+        search_qs = models.Blogs.objects.filter(
             search_friendly__icontains=q)
         results = []
         # print(q)
@@ -123,30 +123,19 @@ def autocompleteModel(request):
     mimetype = 'application/json'
     return HttpResponse(data, mimetype)
 
-def Article_search(request, slug=None):
+def Blog_search(request, slug=None):
     if request.method == 'GET':
         q = request.GET.get('txtSearch')
         if q:
             try:
-                if request.session['selected_location'] == 'Global':
-                    results = models.Articles.objects.get(
+                results = models.Blogs.objects.get(
                         article_title=q, published=1)
-                else:
-                    results = models.Articles.objects.get(
-                        article_title=q, article_location__slug=slug, published=1)
-                articles = models.Articles.objects.filter(published=1)
+                blogs = models.Blogs.objects.filter(published=1)
                 social_feeds_obj = models.SocialFeeds.objects.filter(
                         published=True)
-                return render(request, 'home/articles_detail.html', {'article_object': results, 'articles': articles,'social_feeds_obj':social_feeds_obj})
+                return render(request, 'home/blogdetails.html', {'blog_object': results, 'articles': articles,'social_feeds_obj':social_feeds_obj})
             except Exception as e:
-                if request.session['selected_location'] == 'Global':
-                    results = models.Articles.objects.filter(
+                results = models.Blogs.objects.filter(
                         Q(search_friendly__icontains=q)
                         | Q(article_title__icontains=q), published=1)
-                else:
-                    results = models.Articles.objects.filter(
-                        Q(search_friendly__icontains=q) |
-                        Q(article_title__icontains=q,), article_location__slug=slug, published=1)
-                social_feeds_obj = models.SocialFeeds.objects.filter(
-                        published=True)
-                return render(request, 'home/search_results.html', {'articles': results,'social_feeds_obj':social_feeds_obj})
+                return render(request, 'home/search_results.html', {'blogs': results})

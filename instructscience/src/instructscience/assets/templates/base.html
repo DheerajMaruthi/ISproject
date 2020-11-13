@@ -40,7 +40,7 @@
                         <a href="inspire.html">WOI</a>
                      </li>
                      <li>
-                        <a href="blogs.html">Blog</a>
+                        <a href="{% url 'blog:index' %}">Blog</a>
                      </li>
                      {% comment %}
                      <li>
@@ -135,8 +135,8 @@
       <script type="text/javascript" src="{% static 'instructscience/js/slick.js' %}"></script>
       <script type="text/javascript" src="{% static 'instructscience/js/jquery.fancybox.min.js' %}"></script>
       <script type="text/javascript" src="{% static 'instructscience/js/owl.carousel.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'instructscience/js/script.js' %}"></script>
       <script type="text/javascript" src="{% static 'instructscience/js/jquery.validate.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'instructscience/js/script.js' %}"></script>
     {% block scripts_page_specific %}
     {% endblock %}
     </body>
