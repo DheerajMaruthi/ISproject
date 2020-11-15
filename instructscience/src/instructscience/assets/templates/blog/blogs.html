@@ -44,7 +44,7 @@
             <div class="form">
               <div class="btn-group flex-wrap" role="group" aria-label="Basic example">
                 {% for obj in topic %}
-                <a href="#" class="btn btn-city{% if forloop.first%}-active{% endif %}" type="submit">{{obj.topic}}</a>
+                <a href="javascript:void(0)" class="btn btn-city btn-cat{% if forloop.first%}-active{% endif %}" type="submit" data-filter="card--topc--{{forloop.counter}}">{{obj.topic}}</a>
                 {% endfor %}
                 {% comment %}
                 <a href="#" class="btn btn-city" type="submit">Blog2</a>
@@ -57,29 +57,6 @@
 
 
           <div class="wrapper--one--two mb-3">
-            {% for obj in feature|featured:True|slice:":1" %}
-            <div class="card--section--one  mb-5">
-              <div class="card--type--one">
-                <a href="#">
-                  <img src="{{obj.blog_image.url}}" class="img-fluid" alt="Town">
-                </a>
-                <div class="card-content--one d-flex justify-content-between">
-                  <div class="sec--con--one">
-                    <h4>
-                      <a href="{% url 'blog:blog_details' slug=obj.slug %}">
-                        {{obj.blog_title}}
-                      </a>
-                    </h4>
-                  </div>
-                  <div class="sec--con--two align-self-end">
-                    <a href="{% url 'blog:blog_details' slug=obj.slug %}" class="read--more">Read More<i><img src="images/nxttwo.png"
-                          alt=""></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
             {% include page_template %}
           </div>
         </div>
@@ -101,7 +78,7 @@
           <div class="category--content">
             <ul class="nav">
               {% for obj in category %}
-              <li><a href="#" class="btn btn-cat{% if forloop.first %}-active{% endif %}">{{obj.category}}</a></li>
+              <li><a href="javascript:void(0)" class="btn btn-cat{% if forloop.first %}-active{% endif %}" data-filter="category--{{forloop.counter}}">{{obj.category}}</a></li>
               {% endfor %}
               {% comment %}
               <li><a href="#" class="btn ">Category2</a></li>
@@ -308,6 +285,31 @@
 {% endblock %}
 {% block scripts_page_specific %}
 <script type="text/javascript">
+    $(function(){
+      $('.category--content a.btn').on('click', function(){
+        var classToFilter = $(this).attr('data-filter');
+        console.log(classToFilter);
+        $('.category--content a.btn').removeClass('btn-cat-active');
+        $(this).addClass('btn-cat-active');
+        var hide = $('.sortable').not('.' + classToFilter);
+        var show = $('.sortable' + '.' + classToFilter);
+        show.show();
+        hide.hide();
+      });
+    });
+
+    $(function(){
+      $('.wrapper--one a.btn').on('click', function(){
+        var classToFilter = $(this).attr('data-filter');
+        console.log(classToFilter);
+        $('.wrapper--one a.btn').removeClass('btn-cat-active');
+        $(this).addClass('btn-cat-active');
+        var hide = $('.sortable').not('.' + classToFilter);
+        var show = $('.sortable' + '.' + classToFilter);
+        show.show();
+        hide.hide();
+      });
+    });
 $(document).ready(function() {
    $('#submit_subscribe').on('click',function(){
      $(".subscribe_form").validate({

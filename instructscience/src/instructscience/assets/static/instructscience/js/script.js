@@ -4,17 +4,17 @@ $(document).ready(function () {
       'scrollTop': $("#expertise").position().top
     });
   });
-  $(".card--section--two").css('display', 'none');
-
-  $(".card--section--two").slice(0, 2).show();
-  $(".load--more").click(function (e) {
-    e.preventDefault();
-    $(".card--section--two:hidden").slice(0, 2).fadeIn("slow");
-
-    if ($(".card--section--two:hidden").length == 0) {
-      $(".load--more").fadeOut("slow");
-    }
-  });
+  // $(".card--section--two").css('display', 'none');
+  //
+  // $(".card--section--two").slice(0, 2).show();
+  // $(".load--more").click(function (e) {
+  //   e.preventDefault();
+  //   $(".card--section--two:hidden").slice(0, 2).fadeIn("slow");
+  //
+  //   if ($(".card--section--two:hidden").length == 0) {
+  //     $(".load--more").fadeOut("slow");
+  //   }
+  // });
               $('.slide-main').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -65,26 +65,26 @@ $(document).ready(function () {
     responsive: {
       0: {
        items: 1,
-       dots:false, 
+       dots:false,
        nav:true,
        center: false,
       },
-      600: { 
-        items: 1, 
-        dots:false, 
-        nav:true, 
-        stagePadding: 0 
+      600: {
+        items: 1,
+        dots:false,
+        nav:true,
+        stagePadding: 0
       },
-      992: { 
-        items: 1, 
-        dots:false, 
-        nav:true, 
-        stagePadding: 0 
+      992: {
+        items: 1,
+        dots:false,
+        nav:true,
+        stagePadding: 0
       },
-      1200: { items: 2, 
-        dots:false, 
-        nav:true, 
-        stagePadding: 0 
+      1200: { items: 2,
+        dots:false,
+        nav:true,
+        stagePadding: 0
       },
     }
   });

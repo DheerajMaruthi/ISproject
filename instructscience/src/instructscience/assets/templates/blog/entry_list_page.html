@@ -7,7 +7,7 @@
 {% with total=feature|slice:"1:" %}
 {% paginate 3 total %}
 {% for obj in total %}
-<div class="card--section--two mb-5">
+<div class="sortable card--topc--{{forloop.counter}} category--{{forloop.counter}} mb-5">
   <div class="card--type--two">
     <div class="row">
       <div class="card-img col-12 col-sm-12 col-md-12 col-lg-5 p-0">

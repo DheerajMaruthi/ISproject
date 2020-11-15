@@ -462,6 +462,25 @@ body {
 }
 
 @media(max-width:768px) {
+    .footer-left-wrapper {
+        text-align:center;
+    }
+    .footer-right-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+    #footer-bottom .footer-main-row .footer-right-wrapper ul {
+        justify-content: center;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    #footer-bottom .footer-left-wrapper ul {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    #footer-bottom .footer-left-wrapper ul li {
+        width: 100%;
+    }
   #Banner-sec #Banner-carousel .auth-wrapper .auth-cont-wrapper h2 {
     font-size: 22px;
     padding-top: 10px;

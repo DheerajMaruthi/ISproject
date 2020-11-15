@@ -626,14 +626,14 @@ search--three {
     padding: 0;
 }
 
-.load--more {
+/* .load--more {
     display: flex;
     height: 46px;
     padding: 8px 15px;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    width: 150px;
+    width: 180px;
     background-color: #AB4742;
     border: 1px solid #AB4742;
     color: #fff;
@@ -641,7 +641,7 @@ search--three {
     font-family: Muli-Regular;
     transition: .3s ease;
     text-decoration: none;
-}
+} */
 
 .load--more:hover {
     background-color: inherit;
