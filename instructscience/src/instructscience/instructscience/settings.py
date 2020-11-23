@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'dheeraj.mysql.pythonanywhere-services.com',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dheeraj$isdb',
         'USER': 'dheeraj',
         'PASSWORD': 'Asdfgh!1a',
