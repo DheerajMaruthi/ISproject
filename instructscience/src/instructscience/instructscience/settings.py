@@ -102,7 +102,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dheeraj$isdb',
         'USER': 'dheeraj',
-        'PASSWORD': 'Asdfgh!1a',
+        'PASSWORD': 'admin@123',
         'HOST': 'dheeraj.mysql.pythonanywhere-services.com',
     }
 }
