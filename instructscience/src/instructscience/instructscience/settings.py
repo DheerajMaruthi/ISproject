@@ -103,7 +103,7 @@ DATABASES = {
         'NAME': 'dheeraj$isdb',
         'USER': 'dheeraj',
         'PASSWORD': 'Asdfgh!1a',
-        'HOST': 'localhost',
+        'HOST': 'dheeraj.pythonanywhere.com',
     }
 }
 SITE_ID = 1
