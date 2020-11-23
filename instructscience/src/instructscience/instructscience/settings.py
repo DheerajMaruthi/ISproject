@@ -86,27 +86,26 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hxxfmhng',
-        'USER': 'hxxfmhng',
-        'PASSWORD': 'An_3OCfa0Ym9-S947GKIYmqDOsi1dSQc',
-        'HOST': 'satao.db.elephantsql.com',
-        'PORT': '5432',
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'instructscience',
-#         'USER': 'in_root',
-#         'PASSWORD': 'e064fe44b2bf028450cbdde4cef727ae',
-#         'HOST': 'localhost',
+#         'NAME': 'hxxfmhng',
+#         'USER': 'hxxfmhng',
+#         'PASSWORD': 'An_3OCfa0Ym9-S947GKIYmqDOsi1dSQc',
+#         'HOST': 'satao.db.elephantsql.com',
 #         'PORT': '5432',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'dheeraj.mysql.pythonanywhere-services.com',
+        'NAME': 'dheeraj$isdb',
+        'USER': 'dheeraj',
+        'PASSWORD': 'Asdfgh!1a',
+        'HOST': 'localhost',
+    }
+}
 SITE_ID = 1
 
 # Password validation
