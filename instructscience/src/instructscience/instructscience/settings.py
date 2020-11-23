@@ -104,6 +104,10 @@ DATABASES = {
         'USER': 'dheeraj',
         'PASSWORD': 'admin@123',
         'HOST': 'dheeraj.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        }
     }
 }
 SITE_ID = 1
