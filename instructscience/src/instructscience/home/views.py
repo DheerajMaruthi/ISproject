@@ -25,3 +25,6 @@ class HomeView(generic.TemplateView):
         context['expertise'] = models.Expertise.objects.filter(
             published=True)
         return context
+
+class WoiView(generic.TemplateView):
+    template_name = 'home/inspire.html'
