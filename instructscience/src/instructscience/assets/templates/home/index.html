@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+  {% extends "base.html" %}
 {% load static %}
 
 
@@ -79,9 +79,12 @@
       </div>
       <div class="expertise-tab-wrapper">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
+          {% for obj in expertise %}
           <li class="nav-item">
-            <a class="nav-link active" id="qc-tab" data-toggle="tab" href="#qc" role="tab" aria-controls="qc" aria-selected="true" style="background-image:url('images/inact_qc.png')">Quantum Computing</a>
+            <a class="nav-link {% if forloop.first %}active{% endif %}" id="{{obj.id}}-tab" data-toggle="tab" href="#{{obj.id}}" role="tab" aria-controls="{{obj.id}}"  {% if forloop.first %}aria-selected="true"{% else%}aria-selected="false"{% endif %} style="background-image:url({{obj.logo.url}})">{{obj.title}}</a>
           </li>
+          {% endfor %}
+          {% comment %}
           <li class="nav-item">
             <a class="nav-link" id="ai-tab" data-toggle="tab" href="#ai" role="tab" aria-controls="ai" aria-selected="false" style="background-image:url('images/inact_ai.png')">Artificial intelligence</a>
           </li>
@@ -94,17 +97,22 @@
           <li class="nav-item">
             <a class="nav-link" id="cloud-tab" data-toggle="tab" href="#cloud" role="tab" aria-controls="cloud" aria-selected="false" style="background-image:url('images/inact_cc.png')">Cloud computing</a>
           </li>
+          {% endcomment %}
         </ul>
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="qc" role="tabpanel" aria-labelledby="qc-tab">
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+          {% for obj in expertise %}
+          <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{obj.id}}" role="tabpanel" aria-labelledby="{{obj.id}}-tab">
+            <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
               totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
               sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
               consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
               dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
               incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-              exercitationem ullam</p>
+              exercitationem ullam</p> -->
+              {{obj.description|safe}}
           </div>
+          {% endfor %}
+          {% comment %}
           <div class="tab-pane fade" id="ai" role="tabpanel" aria-labelledby="ai-tab">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
               totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -141,6 +149,7 @@
               incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
               exercitationem ullam</p>
           </div>
+          {% endcomment %}
         </div>
       </div>
     </div>

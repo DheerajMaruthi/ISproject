@@ -22,4 +22,6 @@ class HomeView(generic.TemplateView):
         context = super(HomeView, self).get_context_data(*args, **kwargs)
         context['banners'] = models.HomePageBanners.objects.filter(
             published=True)
+        context['expertise'] = models.Expertise.objects.filter(
+            published=True)
         return context
