@@ -27,7 +27,7 @@
       <form class="videos--sort"  method="get">
         <select onchange="this.form.submit()" class="videos--form" name="video_year">
         {% for obj in vid_year %}
-          <option value="{{obj.content_published_date.year}}" {% if request.GET.video_year in obj.content_published_date|date:'Y' %} selected {% endif %}>{{obj.content_published_date.year}}</option>
+          <option value="{{obj.content_published_date__year}}" {% if request.GET.video_year in obj.content_published_date__year %} selected {% endif %}>{{obj.content_published_date__year}}</option>
         {% endfor %}
         {% comment %}
           <option value="2019">2018</option>
@@ -67,7 +67,7 @@
       <form class="videos--sort"  method="get">
         <select class="videos--form" onchange="this.form.submit()" name="book_year">
           {% for obj in b_year %}
-            <option value="{{obj.content_published_date.year}}" {% if request.GET.book_year in obj.content_published_date|date:'Y' %} selected {% endif %}>{{obj.content_published_date.year}}</option>
+            <option value="{{obj.content_published_date__year}}" {% if request.GET.book_year in obj.content_published_date__year %} selected {% endif %}>{{obj.content_published_date__year}}</option>
           {% endfor %}
           {% comment %}
             <option value="2019">2018</option>
@@ -105,7 +105,7 @@
   <div class="container">
     <div class="gallery row">
       <!-- 3 -->
-      
+
       <div class="gallery-list col-md-4 col-xs-6">
         <div class="image-grid">
           <img src="{% static 'instructscience/images/img_1.jpg' %}" class="img-fluid">
