@@ -60,8 +60,8 @@ class WoiView(generic.TemplateView):
         context['video_search_list'] = video_search_list
         context['book_search_list'] = book_search_list
         # context['gallery_search_list'] = gallery_search_list
-        context['vid_year'] = models.Video.objects.filter(published=1).distinct('content_published_date__year').order_by('-content_published_date__year')
-        context['b_year'] = models.Book.objects.filter(published=1).distinct('content_published_date__year').order_by('-content_published_date__year')
+        context['vid_year'] = models.Video.objects.values('content_published_date__year').distinct().order_by('-content_published_date__year')
+        context['b_year'] = models.Book.objects.values('content_published_date__year').distinct().order_by('-content_published_date__year')
         context['gallery_obj'] = models.Gallery.objects.filter(
             published=1).order_by('-content_published_date')
         return context
