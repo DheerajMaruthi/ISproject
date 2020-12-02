@@ -24,3 +24,22 @@ class ExpertiseAdmin(TreeAdmin, admin.ModelAdmin):
     list_display = ['title', 'logo', 'description', 'created_on', 'updated_on',
                     'published']
     form = movenodeform_factory(models.Expertise)
+
+@admin.register(models.Video)
+class VideoAdmin(TreeAdmin, admin.ModelAdmin):
+    list_display = ['video_title', 'video_image', 'video_link','content_published_date', 'created_on', 'updated_on',
+                    'published']
+    form = movenodeform_factory(models.Video)
+
+@admin.register(models.Book)
+class BookAdmin(TreeAdmin, admin.ModelAdmin):
+    list_display = ['book_title', 'book_image', 'book_link','content_published_date', 'created_on', 'updated_on',
+                    'published']
+    form = movenodeform_factory(models.Book)
+
+
+@admin.register(models.Gallery)
+class GalleryAdmin(TreeAdmin, admin.ModelAdmin):
+    list_display = ['gallery_title', 'gallery_image', 'gallery_link', 'created_on', 'updated_on',
+                    'published']
+    form = movenodeform_factory(models.Gallery)

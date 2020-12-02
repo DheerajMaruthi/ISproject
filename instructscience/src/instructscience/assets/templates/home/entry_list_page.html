@@ -1,0 +1,60 @@
+{% load static %}
+{% load filters %}
+{% load static thumbnail %}
+{% load el_pagination_tags  %}
+
+{% paginate 3 video_search_list %}
+{% for obj in video_search_list%}
+<div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
+  <div class="video-wrapper">
+    <img src="{{obj.video_image.url}}" alt="kindergarten" class="img-fluid">
+    <h2>{{obj.video_title}}</h2>
+    <p>
+      <a href="{{obj.video_link}}">Video</a>
+    </p>
+  </div>
+</div>
+{% endfor %}
+</div>
+<div class="row load--more">
+{% show_more "Load More" %}
+<!-- inspired by video section ends here -->
+
+<!-- inspired by books section starts here -->
+<!-- <section id="inspired-books" class="container-fluid">
+  <div class="container">
+    <div class="row video-head-wrapper">
+      <h2>Books</h2>
+      <form class="videos--sort"  method="get">
+        <select class="videos--form" onchange="this.form.submit()" name="book_year">
+          {% for obj in book_year %}
+            <option value="{{obj.content_published_date__year}}">{{obj.content_published_date__year}}</option>
+          {% endfor %}
+          {% comment %}
+            <option value="2019">2018</option>
+            <option value="2019">2017</option>
+            <option value="2019">2016</option>
+          {% endcomment %}
+        </select>
+      </form>
+    </div>
+    <div class="row videos-row">
+      {% paginate 3 book_search_list %}
+      {% for obj in book_search_list%}
+      <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
+        <div class="video-wrapper">
+          <img src="{{obj.book_image.url}}" alt="kindergarten" class="img-fluid">
+          <h2>{{obj.book_title}}</h2>
+          <p>
+            <a href="{{obj.book_link}}">Video</a>
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row load--more">
+      {% show_more "Load More" %}
+      <!-- <a href="javascript:void(0);">Load More</a> -->
+    </div>
+  </div>
+</section> -->
