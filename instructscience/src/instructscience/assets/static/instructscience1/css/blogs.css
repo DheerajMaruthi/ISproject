@@ -553,6 +553,7 @@ search--three {
     padding: 30px 40px 50px;
     box-shadow: 1px 1px 20px 3px #A2A2A229;
     background-color: #fff;
+    width: 100%;
 }
 
 .top--wrapper {
