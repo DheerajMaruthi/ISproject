@@ -81,7 +81,7 @@
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           {% for obj in expertise %}
           <li class="nav-item">
-            <a class="nav-link {% if forloop.first %}active{% endif %}" id="{{obj.id}}-tab" data-toggle="tab" href="#{{obj.id}}" role="tab" aria-controls="{{obj.id}}"  {% if forloop.first %}aria-selected="true"{% else%}aria-selected="false"{% endif %} style="background-image:url({{obj.logo.url}})">{{obj.title}}</a>
+              <a class="nav-link {% if forloop.first %}active{% endif %}" id="tabs--{{obj.id}}" data-toggle="tab" href="#hometabs--{{obj.id}}" role="tab" aria-controls="{{obj.id}}"  {% if forloop.first %} aria-selected="true" {% else %} aria-selected="false"{% endif %} style="background-image:url({{obj.logo.url}})">{{obj.title}}</a>
           </li>
           {% endfor %}
           {% comment %}
@@ -101,7 +101,7 @@
         </ul>
         <div class="tab-content" id="myTabContent">
           {% for obj in expertise %}
-          <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{obj.id}}" role="tabpanel" aria-labelledby="{{obj.id}}-tab">
+          <div class="tab-pane fade {% if forloop.first %} show active{% endif %}" id="hometabs--{{obj.id}}" role="tabpanel" aria-labelledby="tabs--{{obj.id}}">
             <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
               totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
               sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
