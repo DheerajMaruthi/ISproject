@@ -122,15 +122,18 @@
             <div class="col-12">
                <h3 class="text-center">Related Blog</h3>
                <div class="owl-carousel" id="related">
-                  <div class="related--block">
-                     <a href="#"><img src="images/blog1.png" class="img-fluid " alt=""></a>
-                     <div class="related--content">
-                        <a href="#">
-                           <p>Will sanitizing one’s hands too many times have an adverse effect?</p>
-                        </a>
-                        <a href="#" class="read--moer">Read More</a>
-                     </div>
-                  </div>
+                 {% for obj in recent %}
+                 <div class="related--block">
+                   <a href="{% url 'blog:blog_details' slug=obj.slug %}"><img src="{{obj.blog_image.url}}" class="img-fluid " alt=""></a>
+                   <div class="related--content">
+                     <a href="{% url 'blog:blog_details' slug=obj.slug %}">
+                       <p>{{obj.blog_title}}</p>
+                     </a>
+                     <a href="{% url 'blog:blog_details' slug=obj.slug %}" class="read--moer">Read More</a>
+                   </div>
+                 </div>
+                 {% endfor %}
+                 {% comment %}
                   <div class="related--block">
                      <a href="#"><img src="images/blog2.png" class="img-fluid " alt=""></a>
                      <div class="related--content">
@@ -185,6 +188,7 @@
                         <a href="#" class="read--moer">Read More</a>
                      </div>
                   </div>
+                  {% endcomment %}
                </div>
             </div>
          </div>
