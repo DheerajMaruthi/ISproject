@@ -8,6 +8,10 @@
     background: rgba(0, 0, 0, .4);
 }
 
+.news--main--deatail img {
+    width: 100%;
+}
+
 #news--banner .news--banner {
     position: relative;
     background-position: center;
