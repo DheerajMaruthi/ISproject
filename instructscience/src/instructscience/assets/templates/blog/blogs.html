@@ -98,6 +98,8 @@
               <h5><span class="blog--color blog">Blog</span> | <span class="days">{{ obj.content_published_date|timesince }} ago</span></h5>
               <p><a href="{% url 'blog:blog_details' slug=obj.slug %}">{{obj.blog_title}}</a></p>
             </div>
+            {% empty %}
+            <h3>Please wait! We're coming up with stories you like </h3>
               {% endfor %}
             {% comment %}
             <div class="blog-row mb-5">
@@ -154,6 +156,8 @@
                 <a href="{% url 'blog:blog_details' slug=obj.slug %}" class="read--moer">Read More</a>
               </div>
             </div>
+            {% empty %}
+            <h3>No Recent Item!</h3>
             {% endfor %}
             {% comment %}
             <div class="related--block">
