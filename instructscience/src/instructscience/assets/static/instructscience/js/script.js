@@ -35,7 +35,7 @@ $(document).ready(function () {
     loop: true,
     margin: 50,
     dots: false,
-    navText: ["<img src='images/Bleft.png'>", "<img src='images/Bnext.png'>"],
+    navText: ["<img src='/static/instructscience/images/Bleft.png'>", "<img src='/static/instructscience/images/Bnext.png'>"],
     responsive: {
       0: {
         items: 1,
@@ -59,9 +59,8 @@ $(document).ready(function () {
     center: true,
     loop: true,
     nav: true,
-    autoplay: true,
     stagepadding: 0,
-    navText: ["<img src='images/car-left.png'>", "<img src='images/car-right.png'>"],
+    navText: ["<img src='/static/instructscience/images/car-left.png'>", "<img src='/static/instructscience/images/car-right.png'>"],
     responsive: {
       0: {
        items: 1,

@@ -8,6 +8,10 @@
     background: rgba(0, 0, 0, .4);
 }
 
+.news--main--deatail img {
+    width: 100%;
+}
+
 #news--banner .news--banner {
     position: relative;
     background-position: center;
@@ -553,6 +557,7 @@ search--three {
     padding: 30px 40px 50px;
     box-shadow: 1px 1px 20px 3px #A2A2A229;
     background-color: #fff;
+    width: 100%;
 }
 
 .top--wrapper {
