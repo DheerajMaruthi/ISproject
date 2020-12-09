@@ -109,12 +109,12 @@
     <p>-Carl Sagan</p>
     <div class="gallery row">
       <div id="quote-carousel" class="owl-carousel owl-theme">
-        {% for obj in image_objects %}
-        <div class="item">
-          <a href="{{obj.property_image.url}}" data-fancybox="images">
-              <img src="{{obj.property_image.url}}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
+        {% for obj in gallery_obj %}
+          <div class="item">
+            <a href="{{obj.gallery_image.url}}" data-fancybox="images">
+              <img src="{{obj.gallery_image.url}}" alt="Owl Image" class="img-fluid">
+            </a>
+          </div>
         {% endfor %}
       </div>
     </div>
