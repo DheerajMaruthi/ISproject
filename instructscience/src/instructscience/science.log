@@ -5862,3 +5862,5 @@ ValueError: The view blog.views.SubscriptionCreate didn't return an HttpResponse
 [09/Dec/2020 20:28:40] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
 [09/Dec/2020 20:28:40] INFO [django.server:154] "GET /static/instructscience/images/Bleft_small.png HTTP/1.1" 200 2185
 [09/Dec/2020 20:28:40] INFO [django.server:154] "GET /static/instructscience/images/Bnext_small.png HTTP/1.1" 200 2159
+[09/Dec/2020 21:29:47] INFO [django.utils.autoreload:203] /var/www/html/ISproject/instructscience/src/instructscience/instructscience/settings.py changed, reloading.
+[09/Dec/2020 21:29:48] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
