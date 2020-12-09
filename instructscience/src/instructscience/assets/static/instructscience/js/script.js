@@ -54,6 +54,7 @@ $(document).ready(function () {
       }
     },
   })
+
   $('#social-carousel').owlCarousel({
     autoplay: true,
     center: true,
@@ -88,6 +89,39 @@ $(document).ready(function () {
     }
   });
 });
+
+$('#quote-carousel').owlCarousel({
+  autoplay: true,
+  center: true,
+  loop: true,
+  nav: true,
+  navText: ["<img src='/static/instructscience/images/Bleft_small.png'>", "<img src='/static/instructscience/images/Bnext_small.png'>"],
+  responsive: {
+    0: {
+     items: 1,
+     dots:false,
+     nav:true,
+    },
+    600: {
+      items: 1,
+      dots:false,
+      nav:true,
+    },
+    992: {
+      items: 2,
+      dots:false,
+      nav:true,
+    },
+    1200: {
+      items: 3,
+      dots:true,
+      nav:false,
+    },
+  }
+});
+
+
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }

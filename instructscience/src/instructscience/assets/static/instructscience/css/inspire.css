@@ -144,10 +144,43 @@
 /* Quotes inspiration section starts here */
 #inspired-quotes
 {
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 #inspired-quotes h2
 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+#inspired-quotes .owl-dots
+{
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+#inspired-quotes .owl-dots .owl-dot
+{
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 10px;
+  width:10px;
+  margin: 0px 5px;
+}
+#inspired-quotes .owl-dots .owl-dot.active
+{
+  background-color: #000;
+}
+#quote-carousel .item
+{
+  padding: 10px;
+}
+#inspired-quotes h3
+{
+  text-align: center;
+}
+#inspired-quotes p
+{
+  text-align: right;
   padding-bottom: 20px;
 }
 #inspired-quotes .video-head-wrapper
@@ -204,3 +237,15 @@
   width: 20%;
 }
 /* Quotes inspiration section ends here */
+
+
+/* Media queries */
+@media(max-width:1200px)
+{
+  #quote-carousel .owl-nav
+  {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+  }
+}
