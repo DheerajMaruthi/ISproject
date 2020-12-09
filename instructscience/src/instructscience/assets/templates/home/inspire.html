@@ -109,46 +109,13 @@
     <p>-Carl Sagan</p>
     <div class="gallery row">
       <div id="quote-carousel" class="owl-carousel owl-theme">
+        {% for obj in image_objects %}
         <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
+          <a href="{{obj.property_image.url}}" data-fancybox="images">
+              <img src="{{obj.property_image.url}}" alt="Owl Image" class="img-fluid">
           </a>
         </div>
-        <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
-        <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
-        <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
-        <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
-        <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
-        <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
-        <div class="item">
-          <a href="{% static 'instructscience/images/img_2.jpg' %}" data-fancybox="images">
-              <img src="{% static 'instructscience/images/img_2.jpg' %}" alt="Owl Image" class="img-fluid">
-          </a>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
