@@ -338,9 +338,15 @@
     position: absolute;
     top: 40%;
     display: flex;
-    justify-content: center;
 }
-
+#related .owl-nav .owl-prev
+{
+  left: -2%;
+}
+#related .owl-nav .owl-next
+{
+  right: -2%;
+}
 #related .owl-nav>div>img {
     width: 50px;
 }
