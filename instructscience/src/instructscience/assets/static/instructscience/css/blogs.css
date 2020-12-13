@@ -30,6 +30,11 @@
     z-index: 10;
     transform: translateY(-50%);
 }
+.icon-bar img
+{
+  height: unset !important;
+}
+
 
 .icon-bar a {
     display: block;
