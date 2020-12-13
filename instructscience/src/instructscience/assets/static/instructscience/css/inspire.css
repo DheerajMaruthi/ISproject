@@ -172,6 +172,9 @@
 #book-carousel .owl-nav img, #vidCarousel .owl-nav img {
     width:60px;
 }
+#inspired-videos .video-head-wrapper .videos--sort select:focus {
+    outline: 0;
+}
 /* Books inspiration section ends here */
 
 /* Quotes inspiration section starts here */
