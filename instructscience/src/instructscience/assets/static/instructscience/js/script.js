@@ -55,6 +55,49 @@ $(document).ready(function () {
     },
   })
 
+  $('#videosection').owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    margin: 10,
+    responsiveClass: true,
+    navText: ["<img src='/static/instructscience/images/Bleft.png'>", "<img src='/static/instructscience/images/Bnext.png'>"],
+    loop: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav:false,
+        dots:true
+      },
+      568: {
+        items: 2,
+        nav:false,
+        dots:true
+      },
+      600: {
+        items: 3,
+        nav:true
+      },
+      1000: {
+        items: 3,
+        nav:true,
+        center:true
+      }
+    }
+  })
+  $(document).ready(function() {
+    $('.popup-youtube').magnificPopup({
+      disableOn: 320,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: true
+    });
+  });
+  $('.item').magnificPopup({
+    delegate: 'a',
+  });
   $('#social-carousel').owlCarousel({
     autoplay: true,
     center: true,

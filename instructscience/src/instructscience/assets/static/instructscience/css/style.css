@@ -756,3 +756,66 @@ body {
 .slide-main {
   margin-bottom:10px;
 }
+
+
+
+#inspired .item {
+  position: relative;
+}
+#inspired .item i {
+  display: none;
+  font-size: 4rem;
+  color: #FFF;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+#inspired .item a {
+  display: block;
+  width: 100%;
+}
+#inspired .item a:hover:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+#inspired .item a:hover i {
+  display: block;
+  z-index: 2;
+}
+#inspired .owl-prev:hover,
+#inspired .owl-next:hover {
+  opacity: 0.5;
+}
+
+#inspired  .owl-prev {
+    left: 0;
+    position: absolute;
+    top: 49%;
+}
+#inspired  .owl-next {
+    right: 0;
+    position: absolute;
+    top: 49%;
+}
+#inspired .owl-nav img {
+    width:60px;
+}
+
+#inspired .active.center {
+  transform: scale(1);
+  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0);
+}
+#inspired .active {
+  transform: scale(.8);
+  transition: .6s ease;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
