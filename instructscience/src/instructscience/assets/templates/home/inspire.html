@@ -39,20 +39,22 @@
       </form>
     </div>
     <div class="row videos-row">
-      {% paginate 3 video_search_list %}
-      {% for obj in video_search_list%}
-      <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-        <div class="video-wrapper">
-          <img src="{{obj.video_image.url}}" alt="kindergarten" class="img-fluid">
-          <h2>{{obj.video_title}}</h2>
-          <p>
-            <a href="{{obj.video_link}}" target="_blank">Video</a>
-          </p>
+      <!-- {% paginate 3 video_search_list %} -->
+      <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+          <div class="owl-carousel" id="vidCarousel">
+              {% for obj in video_search_list%}
+              <div class="video-wrapper">
+                  <img src="{{obj.video_image.url}}" alt="kindergarten" class="img-fluid">
+                  <h2>{{obj.video_title}}</h2>
+                  <p>
+                      <a href="{{obj.video_link}}" target="_blank">Video</a>
+                  </p>
+              </div>
+              {% endfor %}
         </div>
       </div>
-      {% endfor %}
     </div>
-    <div class="row load--more">
+    <div class="row load--more d-none">
       {% show_more "Load More" %}
       <!-- <a href="javascript:void(0);">Load More</a> -->
     </div>
@@ -79,7 +81,6 @@
       </form>
     </div>
     <div class="row videos-row">
-      {% paginate 3 book_search_list %}
 
       <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
         <div class="owl-carousel" id="book-carousel">
@@ -97,7 +98,7 @@
         </div>
       </div>
     </div>
-    <div class="row load--more">
+    <div class="row load--more d-none">
       <!-- <a href="javascript:void(0);">Load More</a> -->
       {% show_more "Load More" %}
     </div>

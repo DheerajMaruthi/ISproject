@@ -6223,3 +6223,5 @@ ValueError: The view blog.views.SubscriptionCreate didn't return an HttpResponse
 [13/Dec/2020 09:32:35] WARNING [django.server:154] "GET /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png HTTP/1.1" 404 2010
 [13/Dec/2020 09:51:26] INFO [django.utils.autoreload:203] /var/www/html/ISproject/instructscience/src/instructscience/instructscience/settings.py changed, reloading.
 [13/Dec/2020 09:51:27] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
+[13/Dec/2020 13:33:53] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
+[13/Dec/2020 13:34:28] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader

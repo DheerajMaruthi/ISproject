@@ -86,30 +86,30 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'hxxfmhng',
-#         'USER': 'hxxfmhng',
-#         'PASSWORD': 'An_3OCfa0Ym9-S947GKIYmqDOsi1dSQc',
-#         'HOST': 'satao.db.elephantsql.com',
-#         'PORT': '5432',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dheeraj$isdb',
-        'USER': 'dheeraj',
-        'PASSWORD': 'admin@123',
-        'HOST': 'dheeraj.mysql.pythonanywhere-services.com',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'charset': 'utf8mb4',
-        }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hxxfmhng',
+        'USER': 'hxxfmhng',
+        'PASSWORD': 'An_3OCfa0Ym9-S947GKIYmqDOsi1dSQc',
+        'HOST': 'satao.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dheeraj$isdb',
+#         'USER': 'dheeraj',
+#         'PASSWORD': 'admin@123',
+#         'HOST': 'dheeraj.mysql.pythonanywhere-services.com',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#             'charset': 'utf8mb4',
+#         }
+#     }
+# }
 SITE_ID = 1
 
 # Password validation
