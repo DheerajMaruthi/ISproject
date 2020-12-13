@@ -6540,3 +6540,16 @@ ValueError: The view blog.views.SubscriptionCreate didn't return an HttpResponse
 [13/Dec/2020 13:41:44] WARNING [django.server:154] "GET /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png HTTP/1.1" 404 2026
 [13/Dec/2020 13:41:44] WARNING [django.request:228] Not Found: /favicon.ico
 [13/Dec/2020 13:41:44] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[13/Dec/2020 13:45:12] INFO [django.server:154] "GET /woi/?book_year=2019 HTTP/1.1" 200 10894
+[13/Dec/2020 13:45:12] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 304 0
+[13/Dec/2020 13:45:12] WARNING [django.request:228] Not Found: /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png
+[13/Dec/2020 13:45:12] WARNING [django.server:154] "GET /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png HTTP/1.1" 404 2026
+[13/Dec/2020 13:45:12] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 304 0
+[13/Dec/2020 13:45:12] WARNING [django.request:228] Not Found: /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png
+[13/Dec/2020 13:45:12] WARNING [django.server:154] "GET /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png HTTP/1.1" 404 2026
+[13/Dec/2020 13:45:23] INFO [django.server:154] "GET / HTTP/1.1" 200 22489
+[13/Dec/2020 13:45:27] INFO [django.server:154] "GET /woi/ HTTP/1.1" 200 15966
+[13/Dec/2020 13:45:27] WARNING [django.request:228] Not Found: /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png
+[13/Dec/2020 13:45:27] WARNING [django.server:154] "GET /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png HTTP/1.1" 404 2026
+[13/Dec/2020 13:45:27] WARNING [django.request:228] Not Found: /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png
+[13/Dec/2020 13:45:27] WARNING [django.server:154] "GET /media/filer_public/78/ed/78ed16bb-cb8d-4154-84bc-46a13340f8c4/kindergarten.png HTTP/1.1" 404 2026

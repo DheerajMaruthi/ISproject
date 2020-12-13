@@ -175,6 +175,9 @@
 #inspired-videos .video-head-wrapper .videos--sort select:focus {
     outline: 0;
 }
+#inspired-books .video-head-wrapper .videos--sort select:focus {
+    outline: 0;
+}
 /* Books inspiration section ends here */
 
 /* Quotes inspiration section starts here */
