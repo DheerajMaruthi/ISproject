@@ -15,9 +15,12 @@
 #news--banner .news--banner {
     position: relative;
     background-position: center;
-    background-size: ;
+    background-size:cover;
 }
-
+#news--banner .news--banner img
+{
+  height: 500px;
+}
 .icon-bar {
     position: absolute;
     top: 50%;
