@@ -55,6 +55,13 @@
   font-size: 20px;
   padding: 0px 20px 20px 20px;
 }
+#inspired-videos .videos-row .video-wrapper img
+{
+  height: 200px;
+  width:unset !important;
+  margin: 0 auto;
+  display: block;
+}
 #inspired-videos .videos-row .video-wrapper p a
 {
   color: #000;
@@ -120,6 +127,7 @@
   height: 300px;
   margin: 0 auto;
   display: block;
+  width:unset !important;
 }
 #inspired-books .videos-row .video-wrapper p
 {
@@ -256,6 +264,14 @@
   }
 }
 
+
+@media(min-width:1511px)
+{
+  #inspired-books .videos-row .video-wrapper h2
+  {
+    min-height: 88px;
+  }
+}
 
 #quote-carousel .active.center {
   transform: scale(1);
