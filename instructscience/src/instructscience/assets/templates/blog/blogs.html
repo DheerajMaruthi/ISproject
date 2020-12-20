@@ -41,7 +41,15 @@
         <div class="row">
           <div class="wrapper--one">
             <h4>Topics</h4>
-            <div class="form">
+            <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                 {% for obj in topic %}
+                      <a class="nav-item nav-link {% if forloop.first %} active {% endif %}" id="cardtopic-{{forloop.counter}}-tab" data-toggle="tab" href="#cardtopic-{{forloop.counter}}" role="tab" aria-controls="cardtopic-{{forloop.counter}}" aria-selected="{% if forloop.first %} true {% else %} false {% endif %}">{{obj.topic}}</a>
+                  {% endfor %}
+            </div>
+            </nav>
+
+            <div class="form d-none">
               <div class="btn-group flex-wrap" role="group" aria-label="Basic example">
                 {% for obj in topic %}
                 <a href="javascript:void(0)" class="btn btn-city btn-cat{% if forloop.first%}-active{% endif %} " type="submit" data-filter="card--topc--{{forloop.counter}}">{{obj.topic}}</a>
