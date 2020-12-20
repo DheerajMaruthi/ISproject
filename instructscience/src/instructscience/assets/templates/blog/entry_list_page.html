@@ -1,12 +1,12 @@
 {% load static %}
 {% load filters %}
 {% load static thumbnail %}
-{% load el_pagination_tags  %}
+<!-- {% load el_pagination_tags  %} -->
 
-{% if feature|featured:True %}
-{% with total=feature|slice:"1:" %}
+<!-- {% if feature|featured:True %} -->
+<!-- {% with total=feature|slice:"1:" %} -->
 <div class="tab-content" id="nav-tabContent">
-{% paginate 3 total %}
+<!-- {% paginate 3 total %} -->
 {% for obj in total %}
 <div class="tab-pane  fade{% if forloop.first %} show active {% endif %}" id="{{obj.blog_topic}}" role="tabpanel" aria-labelledby="{{obj.blog_topic}}-tab">
   <div class="card--type--two {{obj.blog_topic.blog_category}}">
@@ -43,9 +43,9 @@
 {% endfor %}
 </div>
 <!-- <a href="javascript:void(0)" class="load--more"> -->
-<div class="load--more">
+<!-- <div class="load--more">
   {% show_more "Load More" %}
-</div>
+</div> -->
 <!-- </a> -->
 {% endwith %}
 {% endif %}
