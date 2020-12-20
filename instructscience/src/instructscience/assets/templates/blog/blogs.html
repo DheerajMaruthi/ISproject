@@ -44,7 +44,7 @@
             <div class="form">
               <div class="btn-group flex-wrap" role="group" aria-label="Basic example">
                 {% for obj in category %}
-                <a href="javascript:void(0)" class="btn btn-city btn-cat{% if forloop.first%}-active{% endif %}" type="submit" data-filter="card--topc--{{forloop.counter}}">{{obj.category}}</a>
+                <a href="javascript:void(0)" class="btn btn-city btn-cat{% if forloop.first%}-active{% endif %} " type="submit" data-filter="card--topc--{{forloop.counter}}">{{obj.category}}</a>
                 {% endfor %}
                 {% comment %}
                 <a href="#" class="btn btn-city" type="submit">Blog2</a>
@@ -78,7 +78,7 @@
           <div class="category--content">
             <ul class="nav">
               {% for obj in topic %}
-              <li><a href="javascript:void(0)" class="btn btn-cat{% if forloop.first %}-active{% endif %}" data-filter="category--{{forloop.counter}}">{{obj.topic}}</a></li>
+              <li><a href="javascript:void(0)" class="btn btn-cat{% if forloop.first %}-active{% endif %} card--topc--{{forloop.counter}}" data-filter="category--{{forloop.counter}}">{{obj.topic}}</a></li>
               {% endfor %}
               {% comment %}
               <li><a href="#" class="btn ">Category2</a></li>
@@ -308,8 +308,8 @@
         console.log(classToFilter);
         $('.wrapper--one a.btn').removeClass('btn-cat-active');
         $(this).addClass('btn-cat-active');
-        var hide = $('.sortable').not('.' + classToFilter);
-        var show = $('.sortable' + '.' + classToFilter);
+        var hide = $('.sortable, .category--content .btn').not('.' + classToFilter);
+        var show = $('.sortable, .category--content .btn' + '.' + classToFilter);
         show.show();
         hide.hide();
       });

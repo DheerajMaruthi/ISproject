@@ -54,6 +54,117 @@ $(document).ready(function () {
       }
     },
   })
+
+  $('#vidCarousel').owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    margin: 10,
+    responsiveClass: true,
+    navText: ["<img src='/static/instructscience/images/Bleft.png'>", "<img src='/static/instructscience/images/Bnext.png'>"],
+    loop: true,
+    center:true,
+    responsive: {
+      0: {
+        items: 1,
+        nav:false,
+        dots:true
+      },
+      568: {
+        items: 2,
+        nav:false,
+        dots:true
+      },
+      600: {
+        items: 3,
+        nav:true
+      },
+      1000: {
+        items: 3,
+        nav:true,
+        center:true
+      }
+    }
+  })
+  $('#book-carousel').owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    margin: 10,
+    responsiveClass: true,
+    navText: ["<img src='/static/instructscience/images/Bleft.png'>", "<img src='/static/instructscience/images/Bnext.png'>"],
+    loop: true,
+    center:true,
+    responsive: {
+      0: {
+        items: 1,
+        nav:false,
+        dots:true
+      },
+      568: {
+        items: 2,
+        nav:false,
+        dots:true
+      },
+      600: {
+        items: 3,
+        nav:true
+      },
+      1000: {
+        items: 3,
+        nav:true,
+        center:true
+      }
+    }
+  })
+
+  $('#videosection').owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    margin: 10,
+    responsiveClass: true,
+    navText: ["<img src='/static/instructscience/images/Bleft.png'>", "<img src='/static/instructscience/images/Bnext.png'>"],
+    loop: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav:false,
+        dots:true
+      },
+      568: {
+        items: 2,
+        nav:false,
+        dots:true
+      },
+      600: {
+        items: 3,
+        nav:true
+      },
+      1000: {
+        items: 3,
+        nav:true,
+        center:true
+      }
+    }
+  })
+
+  $(document).ready(function() {
+
+    $('.popup-youtube').magnificPopup({
+      disableOn: 320,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: true
+    });
+  });
+
+  $('.item').magnificPopup({
+    delegate: 'a',
+  });
+
   $('#social-carousel').owlCarousel({
     autoplay: true,
     center: true,
@@ -88,6 +199,39 @@ $(document).ready(function () {
     }
   });
 });
+
+$('#quote-carousel').owlCarousel({
+  autoplay: true,
+  center: true,
+  loop: true,
+  nav: true,
+  navText: ["<img src='/static/instructscience/images/Bleft_small.png'>", "<img src='/static/instructscience/images/Bnext_small.png'>"],
+  responsive: {
+    0: {
+     items: 1,
+     dots:false,
+     nav:true,
+    },
+    600: {
+      items: 1,
+      dots:false,
+      nav:true,
+    },
+    992: {
+      items: 2,
+      dots:false,
+      nav:true,
+    },
+    1200: {
+      items: 3,
+      dots:true,
+      nav:false,
+    },
+  }
+});
+
+
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }

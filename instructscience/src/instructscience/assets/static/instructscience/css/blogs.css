@@ -15,9 +15,12 @@
 #news--banner .news--banner {
     position: relative;
     background-position: center;
-    background-size: ;
+    background-size:cover;
 }
-
+#news--banner .news--banner img
+{
+  height: 500px;
+}
 .icon-bar {
     position: absolute;
     top: 50%;
@@ -27,6 +30,11 @@
     z-index: 10;
     transform: translateY(-50%);
 }
+.icon-bar img
+{
+  height: unset !important;
+}
+
 
 .icon-bar a {
     display: block;
@@ -335,9 +343,15 @@
     position: absolute;
     top: 40%;
     display: flex;
-    justify-content: center;
 }
-
+#related .owl-nav .owl-prev
+{
+  left: -2%;
+}
+#related .owl-nav .owl-next
+{
+  right: -2%;
+}
 #related .owl-nav>div>img {
     width: 50px;
 }
