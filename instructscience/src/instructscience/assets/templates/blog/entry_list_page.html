@@ -8,7 +8,7 @@
 <div class="tab-content" id="nav-tabContent">
 {% paginate 3 total %}
 {% for obj in total %}
-<div class="tab-pane {{obj.blog_topic.blog_category}} fade{% if forloop.first %} show active {% endif %}" id="cardtopic-{{forloop.counter}}" role="tabpanel" aria-labelledby="cardtopic-{{forloop.counter}}-tab">
+<div class="tab-pane {{obj.blog_topic.blog_category}} fade{% if forloop.first %} show active {% endif %}" id="{{obj.blog_topic}}" role="tabpanel" aria-labelledby="{{obj.blog_topic}}-tab">
   <div class="card--type--two">
     <div class="row">
       <div class="card-img col-12 col-sm-12 col-md-12 col-lg-5 p-0">
