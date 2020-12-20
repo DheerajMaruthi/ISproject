@@ -43,8 +43,8 @@
             <h4>Topics</h4>
             <div class="form">
               <div class="btn-group flex-wrap" role="group" aria-label="Basic example">
-                {% for obj in category %}
-                <a href="javascript:void(0)" class="btn btn-city btn-cat{% if forloop.first%}-active{% endif %} " type="submit" data-filter="card--topc--{{forloop.counter}}">{{obj.category}}</a>
+                {% for obj in topic %}
+                <a href="javascript:void(0)" class="btn btn-city btn-cat{% if forloop.first%}-active{% endif %} " type="submit" data-filter="card--topc--{{forloop.counter}}">{{obj.topic}}</a>
                 {% endfor %}
                 {% comment %}
                 <a href="#" class="btn btn-city" type="submit">Blog2</a>
@@ -77,8 +77,8 @@
           <h3>Category</h3>
           <div class="category--content">
             <ul class="nav">
-              {% for obj in topic %}
-              <li><a href="javascript:void(0)" class="btn btn-cat{% if forloop.first %}-active{% endif %} card--topc--{{forloop.counter}}" data-filter="category--{{forloop.counter}}">{{obj.topic}}</a></li>
+              {% for obj in category %}
+              <li><a href="javascript:void(0)" class="btn btn-cat{% if forloop.first %}-active{% endif %} card--topc--{{forloop.counter}}" data-filter="category--{{forloop.counter}}">{{obj.category}}</a></li>
               {% endfor %}
               {% comment %}
               <li><a href="#" class="btn ">Category2</a></li>
