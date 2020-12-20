@@ -41,7 +41,7 @@ class BlogTopic(MP_Node):
 
 class Blogs(MP_Node):
     blog_topic = models.ForeignKey(BlogTopic,
-                                         verbose_name=_('Blog Category'), null=True, blank=True, on_delete=models.CASCADE, related_name="blog_topic")
+                                         verbose_name=_('Blog Topic'), null=True, blank=True, on_delete=models.CASCADE, related_name="blog_topic")
     blog_title = models.CharField(
         _('Blog Title'), max_length=1000, null=True, blank=True,)
     slug = models.SlugField(max_length=500, blank=True, null=True)
