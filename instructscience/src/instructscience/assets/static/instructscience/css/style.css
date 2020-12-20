@@ -819,3 +819,28 @@ body {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
+
+.nav-tabs {
+    border-bottom: 0px;
+}
+
+.wrapper--one a.active {
+    background: url(../images/check_circle.svg) 16px 8px no-repeat, 16px 8px #AB4742 !important;
+    padding: 7px 33px 7px 51px!important;
+    color: #fff !important;
+    font-size: 18px;
+}
+
+element.style {
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+#nav-tab a {
+    background-color: #fff;
+    border: 1px solid #A7A7A7;
+    color: #000;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}

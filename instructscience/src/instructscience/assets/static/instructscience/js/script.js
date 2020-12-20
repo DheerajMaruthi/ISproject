@@ -4,6 +4,9 @@ $(document).ready(function () {
       'scrollTop': $("#expertise").position().top
     });
   });
+
+
+
   // $(".card--section--two").css('display', 'none');
   //
   // $(".card--section--two").slice(0, 2).show();

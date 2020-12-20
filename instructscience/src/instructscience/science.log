@@ -6620,3 +6620,621 @@ ValueError: The view blog.views.SubscriptionCreate didn't return an HttpResponse
 [19/Dec/2020 22:08:30] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 26480
 [19/Dec/2020 22:08:30] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
 [19/Dec/2020 22:08:30] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:35:54] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 26928
+[20/Dec/2020 10:35:54] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 10:35:54] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:36:01] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 10:36:01] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 10:36:01] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 10:36:02] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 10:37:27] ERROR [django.request:228] Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endcomment'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 64: 'endcomment', expected 'endblock'. Did you forget to register or load this tag?
+[20/Dec/2020 10:37:27] ERROR [django.server:154] "GET /blog/ HTTP/1.1" 500 178358
+[20/Dec/2020 10:37:28] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 10:37:28] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 10:37:52] ERROR [django.request:228] Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endcomment'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/vagrant/.virtualenvs/ins/lib/python3.6/site-packages/django/template/base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 64: 'endcomment', expected 'endblock'. Did you forget to register or load this tag?
+[20/Dec/2020 10:37:52] ERROR [django.server:154] "GET /blog/ HTTP/1.1" 500 178358
+[20/Dec/2020 10:37:53] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 10:37:53] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28715
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 10:38:20] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 10:38:20] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 10:38:20] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 10:38:20] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 10:38:21] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 10:38:21] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 10:38:21] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 10:38:21] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 10:38:24] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 10:38:24] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 10:42:59] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28768
+[20/Dec/2020 10:42:59] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 10:42:59] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 10:42:59] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 10:42:59] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 10:42:59] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 10:43:00] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 10:43:00] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 10:43:00] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 10:43:00] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 10:43:00] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 10:43:01] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 10:43:01] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 10:43:01] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 10:43:04] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 10:43:04] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 10:45:53] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28922
+[20/Dec/2020 10:45:53] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 10:45:53] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:45:53] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 10:45:53] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 10:45:54] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 10:45:54] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 10:52:36] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28850
+[20/Dec/2020 10:52:36] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 10:52:36] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 10:52:36] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 10:52:37] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 10:52:37] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:52:37] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 10:52:37] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 10:52:37] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 10:52:37] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 10:52:37] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 10:52:38] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 10:52:38] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 10:52:38] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 10:52:38] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 10:52:40] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 10:52:40] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28832
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 10:53:27] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 10:53:27] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 10:53:27] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 10:53:27] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 10:53:28] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 10:53:28] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 10:53:28] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 10:53:28] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 10:53:30] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 10:53:30] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 10:54:44] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28884
+[20/Dec/2020 10:54:44] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 10:54:44] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 10:54:44] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 10:54:44] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 10:54:44] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 10:54:45] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 10:54:45] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 10:54:45] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 10:54:45] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 10:54:45] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 10:54:45] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 10:54:45] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 10:54:47] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 10:54:47] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 12:54:37] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28917
+[20/Dec/2020 12:54:37] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 12:54:37] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 12:54:37] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 12:54:37] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 12:54:37] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 12:54:37] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 12:55:28] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28917
+[20/Dec/2020 12:55:28] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 12:55:28] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 12:55:32] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 12:55:32] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 12:55:32] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 12:55:33] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28914
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 12:56:11] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 12:56:11] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 12:56:11] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 12:56:11] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 12:56:12] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 12:56:12] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 12:56:12] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 12:56:12] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 12:56:17] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 12:56:17] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28859
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 12:57:01] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 12:57:01] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 12:57:01] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 12:57:02] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 12:57:02] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 12:57:02] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 12:57:02] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 12:57:02] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 12:57:04] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 12:57:04] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28849
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 12:57:48] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 12:57:49] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 12:57:49] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 12:57:49] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 12:57:49] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 12:57:49] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 12:57:49] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 12:57:49] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 12:57:52] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 12:57:52] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 12:58:41] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28894
+[20/Dec/2020 12:58:41] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 12:58:41] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 12:58:41] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 12:58:42] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 12:58:42] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 12:58:42] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 12:58:42] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 12:58:42] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 12:58:42] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 12:58:42] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 12:58:43] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 12:58:43] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 12:58:43] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 12:58:45] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 12:58:45] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 28879
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[20/Dec/2020 13:00:36] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 17076
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[20/Dec/2020 13:00:36] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[20/Dec/2020 13:00:37] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[20/Dec/2020 13:00:37] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3159
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[20/Dec/2020 13:00:37] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870
+[20/Dec/2020 13:00:37] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[20/Dec/2020 13:00:37] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 5734
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[20/Dec/2020 13:00:37] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[20/Dec/2020 13:00:38] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[20/Dec/2020 13:00:38] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[20/Dec/2020 13:00:38] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[20/Dec/2020 13:00:38] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[20/Dec/2020 13:00:38] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[20/Dec/2020 13:00:38] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[20/Dec/2020 13:00:38] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[20/Dec/2020 13:00:40] WARNING [django.request:228] Not Found: /favicon.ico
+[20/Dec/2020 13:00:40] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2668
