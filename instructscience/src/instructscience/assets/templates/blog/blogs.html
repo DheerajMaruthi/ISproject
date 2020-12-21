@@ -44,7 +44,7 @@
             <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                  {% for obj in topic %}
-                      <a class="nav-item nav-link {% if forloop.first %} active {% endif %}" id="{{obj.topic}}-tab" data-toggle="tab" href="#{{obj.topic}}" role="tab" aria-controls="{{obj.topic}}" aria-selected="{% if forloop.first %} true {% else %} false {% endif %}">{{obj.topic}}</a>
+                      <a class="nav-item nav-link {% if forloop.first %} active {% endif %}" id="cardtopic{{forloop.counter}}-tab" data-toggle="tab" href="#cardtopic{{forloop.counter}}" role="tab" aria-controls="cardtopic{{forloop.counter}}" aria-selected="{% if forloop.first %} true {% else %} false {% endif %}">{{obj.topic}}</a>
                   {% endfor %}
             </div>
             </nav>
