@@ -44,7 +44,7 @@
             <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                  {% for obj in topic %}
-                      <a class="nav-item nav-link {% if forloop.first %} active {% endif %}" id="cardtopic{{forloop.counter}}-tab" data-toggle="tab" href="#cardtopic{{forloop.counter}}" role="tab" aria-controls="cardtopic{{forloop.counter}}" data-filter="cardtopic{{forloop.counter}}" aria-selected="{% if forloop.first %} true {% else %} false {% endif %}">{{obj.topic}}</a>
+                      <a class="nav-item nav-link {{obj.category}} {% if forloop.first %} active {% endif %}" id="cardtopic{{forloop.counter}}-tab" data-toggle="tab" href="#cardtopic{{forloop.counter}}" role="tab" aria-controls="cardtopic{{forloop.counter}}" aria-selected="{% if forloop.first %} true {% else %} false {% endif %}">{{obj.topic}}</a>
                   {% endfor %}
             </div>
             </nav>
@@ -301,14 +301,9 @@ $(document).ready(function() {
         $('.wrapper--one--two .tab-pane .card--type--two').fadeOut();
         $('.' + checkeddValue).fadeIn();
         $('.category--content ul li a').fadeOut();
+        $('#nav-tab a').fadeOut();
         $('.' + checkeddValue).fadeIn();
       });
-
-      $('#nav-tab a').on("click", function() {
-          var checkeddValue = $(this).attr('data-filter');
-          $('.category--content ul li a').fadeOut();
-          $('.' + checkeddValue).fadeIn();
-        });
 
    $('#submit_subscribe').on('click',function(){
      $(".subscribe_form").validate({
