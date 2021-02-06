@@ -97,19 +97,31 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dheeraj$isdb',
+#         'USER': 'dheeraj',
+#         'PASSWORD': 'admin@123',
+#         'HOST': 'dheeraj.mysql.pythonanywhere-services.com',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#             'charset': 'utf8mb4',
+#         }
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dheeraj$isdb',
-        'USER': 'dheeraj',
-        'PASSWORD': 'admin@123',
-        'HOST': 'dheeraj.mysql.pythonanywhere-services.com',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'charset': 'utf8mb4',
-        }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "instructscience",
+        'USER': "instructscience_root",
+        'PASSWORD': "8ae23f226a216dc08ac9001cdacd1c23",
+        'HOST': "localhost",
+        'PORT': '5432',
     }
 }
+
 SITE_ID = 1
 
 # Password validation
