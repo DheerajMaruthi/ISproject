@@ -304,6 +304,16 @@ body {
 
 /* social carousel sec style starts here */
 
+#social-twitter h2
+{
+  text-align: center;
+  font-size: 36px;
+  color:#000;
+  font-family: Muli-Bold;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
 #social-carousel {
   padding: 150px 0 0 0;
 }
@@ -462,6 +472,10 @@ body {
 }
 
 @media(max-width:768px) {
+  #social-twitter h2
+  {
+    font-size: 26px;
+  }
     .footer-left-wrapper {
         text-align:center;
     }

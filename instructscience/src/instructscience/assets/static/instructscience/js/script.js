@@ -216,25 +216,28 @@ $(document).ready(function () {
       0: {
        items: 1,
        dots:false,
-       nav:true,
+       nav:false,
        center: false,
       },
       600: {
         items: 1,
         dots:false,
-        nav:true,
-        stagePadding: 0
+        nav:false,
+        stagePadding: 0,
+        center: true
       },
       992: {
         items: 1,
         dots:false,
         nav:true,
-        stagePadding: 0
+        stagePadding: 0,
+        center: true
       },
       1200: { items: 2,
         dots:false,
-        nav:true,
-        stagePadding: 0
+        nav:false,
+        stagePadding: 0,
+        center: true
       },
     }
   });
