@@ -315,7 +315,8 @@ body {
 }
 
 #social-carousel {
-  padding: 150px 0 0 0;
+  padding: 70px 0 0 0;
+  height: 600px;
 }
 
 #social-carousel .owl-item {
@@ -407,6 +408,11 @@ body {
   padding: 0;
 }
 
+#footer-bottom .footer-left-wrapper p a
+{
+  color:#000;
+  text-decoration: none;
+}
 #footer-bottom .footer-left-wrapper ul li:last-child a::after {
   content: '';
 }
@@ -472,6 +478,10 @@ body {
 }
 
 @media(max-width:768px) {
+  #social-carousel
+  {
+    padding: 0px;
+  }
   #social-twitter h2
   {
     font-size: 26px;
@@ -555,6 +565,14 @@ body {
   #social-carousel .owl-nav {
     bottom: 0px;
     top: inherit;
+  }
+  #social-carousel .owl-nav
+  {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
 
