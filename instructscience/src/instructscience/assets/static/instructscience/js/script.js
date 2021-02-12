@@ -94,7 +94,8 @@ $(document).ready(function () {
     }
   })
 
-  $('#social-feed').owlCarousel({
+
+  $('#social-carousel').owlCarousel({
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
@@ -102,7 +103,6 @@ $(document).ready(function () {
     responsiveClass: true,
     navText: ["<img src='/static/instructscience/images/Bleft.png'>", "<img src='/static/instructscience/images/Bnext.png'>"],
     loop: true,
-    center:true,
     responsive: {
       0: {
         items: 1,
