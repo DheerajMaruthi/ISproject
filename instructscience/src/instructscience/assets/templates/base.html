@@ -52,8 +52,8 @@
                </div>
                <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="/inspire.html">WOI</a>
-                  <a href="#">Blog</a>
+                  <a href="{% url 'home:inspire' %}">WOI</a>
+                  <a href="{% url 'blog:index' %}">Blog</a>
                   <!-- <a href="#"><img src="{% static 'instructscience/images/search.png' %}" alt=""> </i></a> -->
                </div>
                <span style="font-size:30px;cursor:pointer" class="ham" onclick="openNav()">&#9776;</span>
