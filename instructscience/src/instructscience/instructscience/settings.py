@@ -16,17 +16,42 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 
+try:
+    INSTRUCT_ENV = os.environ['INSTRUCT_ENV']
+    INSTRUCT_SECRET_KEY = os.environ['INSTRUCT_SECRET_KEY']
+    INSTRUCT_DB_NAME = os.environ['INSTRUCT_DB_NAME']
+    INSTRUCT_DB_USER = os.environ['INSTRUCT_DB_USER']
+    INSTRUCT_DB_PASSWORD = os.environ['INSTRUCT_DB_PASSWORD']
+    INSTRUCT_DB_HOST = os.environ['INSTRUCT_DB_HOST']
+    INSTRUCT_ALLOWED_HOSTS = os.environ['INSTRUCT_ALLOWED_HOSTS']
+    #LEGALECOMM_ALLOWED_HOSTS = '127.0.0.1'
+except Exception as e:
+    print(f"{str(e)}")
+    exit()
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%6mx$x^9uiaiovi0vyseue0edv6l5m1vyo3%7nuf+3v8(kt(v_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if LEGALECOMM_ENV == "DEV":
+    DEBUG = True
+    USE_LESS = True
+elif LEGALECOMM_ENV == "PROD":
+    DYNAMIC = True
+    DEBUG = False
+    USE_LESS = False
+else:
+    DEBUG = True
+    USE_LESS = False
 
-ALLOWED_HOSTS = ['*']
+
+ALLOWED_HOSTS = [INSTRUCT_ALLOWED_HOSTS]
+
+SECRET_KEY = INSTRUCT_SECRET_KEY
+
 
 
 # Application definition
@@ -114,10 +139,10 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "instructscience",
-        'USER': "instructscience_root",
-        'PASSWORD': "8ae23f226a216dc08ac9001cdacd1c23",
-        'HOST': "localhost",
+        'NAME': INSTRUCT_DB_NAME,
+        'USER': INSTRUCT_DB_USER,
+        'PASSWORD': INSTRUCT_DB_PASSWORD,
+        'HOST': INSTRUCT_DB_HOST,
         'PORT': '5432',
     }
 }
