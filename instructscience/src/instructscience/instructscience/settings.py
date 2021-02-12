@@ -24,7 +24,7 @@ try:
     INSTRUCT_DB_PASSWORD = os.environ['INSTRUCT_DB_PASSWORD']
     INSTRUCT_DB_HOST = os.environ['INSTRUCT_DB_HOST']
     INSTRUCT_ALLOWED_HOSTS = os.environ['INSTRUCT_ALLOWED_HOSTS']
-    #LEGALECOMM_ALLOWED_HOSTS = '127.0.0.1'
+    #INSTRUCT_ALLOWED_HOSTS = '127.0.0.1'
 except Exception as e:
     print(f"{str(e)}")
     exit()
@@ -36,10 +36,10 @@ except Exception as e:
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if LEGALECOMM_ENV == "DEV":
+if INSTRUCT_ENV == "DEV":
     DEBUG = True
     USE_LESS = True
-elif LEGALECOMM_ENV == "PROD":
+elif INSTRUCT_ENV == "PROD":
     DYNAMIC = True
     DEBUG = False
     USE_LESS = False
