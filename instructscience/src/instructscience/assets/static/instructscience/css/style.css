@@ -633,12 +633,6 @@ body {
   }
 }
 
-@media(min-width:1501px) and (max-width:1800px) {
-  #Banner-sec #Banner-carousel #car-3 {
-    height: 450px;
-  }
-}
-
 @media(min-width:769px) {
   .container {
     max-width: 85%;
