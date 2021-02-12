@@ -169,6 +169,13 @@ body {
   padding-bottom: 10px;
 }
 
+#Banner-sec .auth-img-wrapper img
+{
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
 #Banner-sec #Banner-carousel .auth-wrapper .auth-cont-wrapper h3 {
   color: #fff;
   font-size: 26px;
@@ -369,13 +376,13 @@ body {
   text-align: center;
   font-size: 36px;
   color:#000;
-  font-family: Muli-Bold;
+  font-family: Muli-SemiBold;
   margin: 0;
   padding-bottom: 20px;
 }
 
 #social-carousel {
-  padding: 70px 0 0 0;
+  padding: 0px 0 0 0;
   height: 400px;
 }
 
