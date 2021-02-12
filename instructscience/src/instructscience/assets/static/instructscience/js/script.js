@@ -110,12 +110,12 @@ $(document).ready(function () {
         dots:true
       },
       568: {
-        items: 2,
+        items: 1,
         nav:false,
         dots:true
       },
       600: {
-        items: 3,
+        items: 1,
         nav:true
       },
       1000: {
@@ -173,12 +173,12 @@ $(document).ready(function () {
         dots:true
       },
       568: {
-        items: 2,
+        items: 1,
         nav:false,
         dots:true
       },
       600: {
-        items: 3,
+        items: 1,
         nav:true
       },
       1000: {
