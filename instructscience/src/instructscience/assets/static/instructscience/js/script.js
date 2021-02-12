@@ -34,6 +34,10 @@ $(document).ready(function () {
                 arrows: false,
                 focusOnSelect: true
               });
+
+
+
+
   $("#related").owlCarousel({
     loop: true,
     margin: 50,
@@ -89,6 +93,39 @@ $(document).ready(function () {
       }
     }
   })
+
+  $('#social-feed').owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    margin: 10,
+    responsiveClass: true,
+    navText: ["<img src='/static/instructscience/images/Bleft.png'>", "<img src='/static/instructscience/images/Bnext.png'>"],
+    loop: true,
+    center:true,
+    responsive: {
+      0: {
+        items: 1,
+        nav:false,
+        dots:true
+      },
+      568: {
+        items: 2,
+        nav:false,
+        dots:true
+      },
+      600: {
+        items: 3,
+        nav:true
+      },
+      1000: {
+        items: 3,
+        nav:true,
+        center:true
+      }
+    }
+  })
+
   $('#book-carousel').owlCarousel({
     autoplay: true,
     autoplayTimeout: 5000,
