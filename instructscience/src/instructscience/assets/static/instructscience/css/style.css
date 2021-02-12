@@ -534,6 +534,10 @@ body {
   {
     top:40%;
   }
+  #social-twitter .owl-next
+  {
+    top:40%;
+  }
   #social-carousel
   {
     height: 330px;
