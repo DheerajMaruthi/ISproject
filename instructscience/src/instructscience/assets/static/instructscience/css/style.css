@@ -530,6 +530,14 @@ body {
 }
 
 @media(max-width:768px) {
+  #social-twitter .owl-prev
+  {
+    top:40%;
+  }
+  #social-carousel
+  {
+    height: 330px;
+  }
   #social-carousel
   {
     padding: 0px;
