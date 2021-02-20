@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" id="searchresults">
+    <div class="container">
+        <h2>Search Results :</h2>
+        <div class="row">
+            {% if blog_object %}
+            {% for obj in blog_object %}
+            <div class="col-12">
+                <h3><a href="{% url 'blog:blog_details' slug=obj.slug %}">{{obj.blog_title}}</a></h3>
+<p>{{obj.blog_content|safe|truncatewords_html:50|default:""}}</p>
+<div class="sec--con--two align-self-end">
+  <a href="{% url 'blog:blog_details' slug=obj.slug %}" class="read--more">Read More<i>
+      <img src="{% static 'instructscience/images/nxttwo.png' %}" alt=""></i></a>
+</div>
+
+            </div>
+            {% endfor %}
+            {% else %}
+              <h3 class="noresult-tile">No results found</h3>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

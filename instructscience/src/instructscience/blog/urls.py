@@ -10,7 +10,8 @@ app_name = 'blog'
 urlpatterns = [
     path('', views.Index.as_view(), name='index'),
     path('subscribe/', views.SubscriptionCreate, name='subscribe'),
+    re_path(r'^ajax_calls/search/', views.autocompleteModel, name='search'),
+    path('blog-search/', views.Blog_search, name='blog_search'),
     path('<slug:slug>/', views.BlogsDetailView.as_view(),
-         name='blog_details'),
-
+    name='blog_details'),
 ]

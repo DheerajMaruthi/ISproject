@@ -48,8 +48,7 @@ class BlogsDetailView(generic.TemplateView):
         obj = self.kwargs['slug']
         context['recent'] = models.Blogs.objects.filter(
             published=True).order_by('content_published_date')
-        context['blog_object'] = models.Blogs.objects.get(
-        slug=obj)
+        context['blog_object'] = models.Blogs.objects.get(slug=obj)
         return context
 
 
@@ -116,7 +115,7 @@ def autocompleteModel(request):
         # print(q)
         # print(search_qs)
         for r in search_qs:
-            results.append(r.article_title)
+            results.append(r.blog_title)
         data = json.dumps(results)
     else:
         data = 'fail'
@@ -126,16 +125,18 @@ def autocompleteModel(request):
 def Blog_search(request, slug=None):
     if request.method == 'GET':
         q = request.GET.get('txtSearch')
+        print(q)
         if q:
             try:
                 results = models.Blogs.objects.get(
-                        article_title=q, published=1)
-                blogs = models.Blogs.objects.filter(published=1)
-                social_feeds_obj = models.SocialFeeds.objects.filter(
-                        published=True)
-                return render(request, 'home/blogdetails.html', {'blog_object': results, 'articles': articles,'social_feeds_obj':social_feeds_obj})
+                        blog_title=q, published=1)
+                recent = models.Blogs.objects.filter(
+                    published=True).order_by('content_published_date')
+                # social_feeds_obj = models.SocialFeeds.objects.filter(
+                #         published=True)
+                return render(request, 'blog/blogdetails.html', {'blog_object': results,'recent':recent})
             except Exception as e:
                 results = models.Blogs.objects.filter(
                         Q(search_friendly__icontains=q)
-                        | Q(article_title__icontains=q), published=1)
-                return render(request, 'home/search_results.html', {'blogs': results})
+                        | Q(blog_title__icontains=q), published=1)
+                return render(request, 'blog/search_results.html', {'blog_object': results})
