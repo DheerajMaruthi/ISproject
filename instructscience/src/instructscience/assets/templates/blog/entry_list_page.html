@@ -25,7 +25,7 @@
             </div>
             <div class="inner--content">
               <h4>
-                <a href="blogdetails.html">{{obj.blog_title}}
+                <a href="{% url 'blog:blog_details' slug=obj.slug %}">{{obj.blog_title}}
                 </a>
               </h4>
               <p dir="ltr">{{obj.blog_short_description}}</p>
