@@ -36,12 +36,11 @@
       <img src="{% static 'instructscience/images/blogdeatailsbanner.png' %}" alt="details1" class="img-fluid w-100" alt="">
       <div class="icon-bar">
          <a href="http://www.facebook.com/sharer.php?s=100&p[url]={{ request.build_absolute_uri }}&p[images][0]={{ request.scheme }}://{{ request.get_host }}{{blog_object.blog_image.url}}&p[title]={{blog_object.blog_title}}&p[summary]={{blog_object.blog_short_description|safe}}" target="_blank" class="facebook"><img src="{% static 'instructscience/images/n-fb.png' %}" alt=""></a>
-         <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{blog_object.blog_title}}" class="twitter" target="_blank"><img src="{% static 'instructscience/images/n-tw.png' %}" alt=""></a>
-         <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{blog_object.blog_title}}&summary={{blog_object.blog_short_description}}" target="_blank" class="linkedin"><img src="{% static 'instructscience/images/n-in.png' %}" alt=""></a>
+         <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{blog_object.blog_title}}&images={{ request.scheme }}://{{ request.get_host }}{{blog_object.blog_image.url}}" class="twitter" target="_blank"><img src="{% static 'instructscience/images/n-tw.png' %}" alt=""></a>
+         <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{blog_object.blog_title}}&summary={{blog_object.blog_short_description}}&images={{ request.scheme }}://{{ request.get_host }}{{blog_object.blog_image.url}}" target="_blank" class="linkedin"><img src="{% static 'instructscience/images/n-in.png' %}" alt=""></a>
          <a href="mailto:?Subject={{blog_object.blog_title}};Body={{blog_object.blog_short_description|safe|safe}}{{ request.build_absolute_uri }}" target="_blank" class="msger"><img src="{% static 'instructscience/images/n-msg.png' %}" alt=""></a></div>
    </div>
 </div>
-
 
 <div class="container-fluid" id="news--details--wrapper">
    <div class="container">
