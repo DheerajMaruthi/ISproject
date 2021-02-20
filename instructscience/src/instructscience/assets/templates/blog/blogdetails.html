@@ -4,6 +4,21 @@
 
 {% block meta_tags %}
 {# metatags goes here #}
+<meta name="description" content="{{blog_object.meta_description}}">
+<meta name="keywords" content="{{blog_object.meta_keywords}}">
+<meta name="title" content="{{blog_object.meta_title}}">
+<meta property="og:site_name" content="{{ request.META.HTTP_HOST }}">
+<meta property="og:title" content="{{blog_object.blog_title}}" />
+<meta property="og:description" content="{{blog_object.blog_short_description|safe|safe}}" />
+<meta property="og:image" itemprop="image" content="{{ request.scheme }}://{{ request.get_host }}{{ blog_object.blog_image.url }}">
+<meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{request.get_full_path}}" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@healthierbuildings"/>
+<meta name="twitter:title" content="{{blog_object.title}}"/>
+<meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{{blog_object.blog_image.url}}"/>
+<meta name="twitter:url" content="{{ request.scheme }}://{{ request.get_host }}{{request.get_full_path}}"/>
+<meta property="og:image:secure_url" content="{{ request.scheme }}://{{ request.get_host }}{{ blog_object.blog_image.url }}" />
 {% endblock %}
 {% block css %}
 <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
@@ -20,10 +35,10 @@
    <div class="row news--banner">
       <img src="{% static 'instructscience/images/blogdeatailsbanner.png' %}" alt="details1" class="img-fluid w-100" alt="">
       <div class="icon-bar">
-         <a href="#" target="_blank" class="facebook"><img src="{% static 'instructscience/images/n-fb.png' %}" alt=""></a>
-         <a href="#" class="twitter" target="_blank"><img src="{% static 'instructscience/images/n-tw.png' %}" alt=""></a>
-         <a href="#" target="_blank" class="linkedin"><img src="{% static 'instructscience/images/n-in.png' %}" alt=""></a>
-         <a href="mailto:#" target="_blank" class="msger"><img src="{% static 'instructscience/images/n-msg.png' %}" alt=""></a></div>
+         <a href="http://www.facebook.com/sharer.php?s=100&p[url]={{ request.build_absolute_uri }}&p[images][0]={{ request.scheme }}://{{ request.get_host }}{{blog_object.blog_image.url}}&p[title]={{blog_object.blog_title}}&p[summary]={{blog_object.blog_short_description|safe}}" target="_blank" class="facebook"><img src="{% static 'instructscience/images/n-fb.png' %}" alt=""></a>
+         <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{blog_object.blog_title}}" class="twitter" target="_blank"><img src="{% static 'instructscience/images/n-tw.png' %}" alt=""></a>
+         <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{blog_object.blog_title}}&summary={{blog_object.blog_short_description}}" target="_blank" class="linkedin"><img src="{% static 'instructscience/images/n-in.png' %}" alt=""></a>
+         <a href="mailto:?Subject={{blog_object.blog_title}};Body={{blog_object.blog_short_description|safe|safe}}{{ request.build_absolute_uri }}" target="_blank" class="msger"><img src="{% static 'instructscience/images/n-msg.png' %}" alt=""></a></div>
    </div>
 </div>
 
