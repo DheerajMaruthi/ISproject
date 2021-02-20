@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:site" content="@healthierbuildings"/>
 <meta name="twitter:title" content="{{blog_object.title}}"/>
-<meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{{blog_object.blog_image.url}}"/>
+<meta property="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{{blog_object.blog_image.url}}"/>
 <meta name="twitter:url" content="{{ request.scheme }}://{{ request.get_host }}{{request.get_full_path}}"/>
 <meta property="og:image:secure_url" content="{{ request.scheme }}://{{ request.get_host }}{{ blog_object.blog_image.url }}" />
 {% endblock %}
