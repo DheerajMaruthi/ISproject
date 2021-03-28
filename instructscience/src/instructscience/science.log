@@ -8767,3 +8767,278 @@ django.template.exceptions.TemplateSyntaxError: 'for' tag received an invalid ar
 [16/Jan/2021 15:43:57] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
 [16/Jan/2021 15:43:57] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
 [16/Jan/2021 15:43:57] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[28/Mar/2021 20:45:37] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
+[28/Mar/2021 20:46:03] INFO [django.server:154] "GET / HTTP/1.1" 200 24169
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/css/animate.css
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/css/bootstrap.min.css
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/css/aos.css
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/css/bootstrap-select.min.css
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/css/owl.carousel.min.css
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/css/slick.css
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/css/style.css
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/js/jquery.min.js
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/js/bootstrap.min.js
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:03] WARNING [django.request:228] Not Found: /static/instructscience/js/slick.js
+[28/Mar/2021 20:46:03] WARNING [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/js/owl.carousel.min.js
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/js/jquery.validate.min.js
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/js/script.js
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/images/Logo.png
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /media/filer_public/98/28/9828f06e-bf8a-4236-b825-9a8104121094/1.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /media/filer_public/98/28/9828f06e-bf8a-4236-b825-9a8104121094/1.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/images/arrow_down.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/images/arrow_down.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/images/fb.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/images/tw.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/images/in.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/images/yt.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/js/owl.carousel.min.js
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/images/insta.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /media/filer_public/5b/ff/5bffde4d-0c8f-45f8-a656-c642d1e9e01e/inact_qc.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /media/filer_public/5b/ff/5bffde4d-0c8f-45f8-a656-c642d1e9e01e/inact_qc.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/js/jquery.validate.min.js
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /media/filer_public/09/b3/09b36b3a-3e36-49d0-877d-b693afe3e1fd/inact_ai.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /media/filer_public/09/b3/09b36b3a-3e36-49d0-877d-b693afe3e1fd/inact_ai.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /media/filer_public/b9/8a/b98ac816-c630-4917-b776-23dd12594494/inact_gen.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /media/filer_public/b9/8a/b98ac816-c630-4917-b776-23dd12594494/inact_gen.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /media/filer_public/78/9d/789d2a34-cee9-468b-babe-f78844b8d943/inact_ml.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /media/filer_public/78/9d/789d2a34-cee9-468b-babe-f78844b8d943/inact_ml.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /media/filer_public/18/4c/184c4583-9775-460d-8d00-e50fdc007cc2/inact_cc.png
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /media/filer_public/18/4c/184c4583-9775-460d-8d00-e50fdc007cc2/inact_cc.png HTTP/1.1" 404 77
+[28/Mar/2021 20:46:04] WARNING [django.request:228] Not Found: /static/instructscience/js/script.js
+[28/Mar/2021 20:46:04] WARNING [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 404 77
+[28/Mar/2021 20:46:57] ERROR [django.request:228] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 195, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/postgresql/base.py", line 178, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "satao.db.elephantsql.com" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1095, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 256, in cursor
+    return self._cursor()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 233, in _cursor
+    self.ensure_connection()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 195, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/postgresql/base.py", line 178, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not translate host name "satao.db.elephantsql.com" to address: Temporary failure in name resolution
+
+[28/Mar/2021 20:46:57] ERROR [django.server:154] "GET / HTTP/1.1" 500 27
+[28/Mar/2021 20:46:57] WARNING [django.request:228] Not Found: /favicon.ico
+[28/Mar/2021 20:46:57] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 77
+[28/Mar/2021 20:47:13] ERROR [django.request:228] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 195, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/postgresql/base.py", line 178, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "satao.db.elephantsql.com" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/template/defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1095, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 256, in cursor
+    return self._cursor()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 233, in _cursor
+    self.ensure_connection()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/base/base.py", line 195, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/django/db/backends/postgresql/base.py", line 178, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/vagrant/.virtualenvs/IS/lib/python3.6/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not translate host name "satao.db.elephantsql.com" to address: Temporary failure in name resolution
+
+[28/Mar/2021 20:47:13] ERROR [django.server:154] "GET / HTTP/1.1" 500 27
+[28/Mar/2021 20:48:00] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET / HTTP/1.1" 200 24169
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/css/aos.css HTTP/1.1" 200 28765
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/css/animate.css HTTP/1.1" 200 81370
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.min.css HTTP/1.1" 200 11120
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/css/bootstrap.min.css HTTP/1.1" 200 140942
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/css/owl.carousel.min.css HTTP/1.1" 200 2941
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/css/slick.css HTTP/1.1" 200 1895
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/css/style.css HTTP/1.1" 200 19364
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/js/jquery.min.js HTTP/1.1" 200 84384
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/js/bootstrap.min.js HTTP/1.1" 200 58078
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/js/slick.js HTTP/1.1" 200 93018
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/js/owl.carousel.min.js HTTP/1.1" 200 42772
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/js/jquery.validate.min.js HTTP/1.1" 200 21093
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/js/script.js HTTP/1.1" 200 6482
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/images/Logo.png HTTP/1.1" 200 14765
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /media/filer_public/98/28/9828f06e-bf8a-4236-b825-9a8104121094/1.png HTTP/1.1" 200 77693
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/images/arrow_down.png HTTP/1.1" 200 1146
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/images/fb.png HTTP/1.1" 200 500
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/images/tw.png HTTP/1.1" 200 597
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/images/in.png HTTP/1.1" 200 493
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/images/yt.png HTTP/1.1" 200 708
+[28/Mar/2021 20:48:06] INFO [django.server:154] "GET /static/instructscience/images/insta.png HTTP/1.1" 200 566
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /media/filer_public/09/b3/09b36b3a-3e36-49d0-877d-b693afe3e1fd/inact_ai.png HTTP/1.1" 200 1315
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /media/filer_public/5b/ff/5bffde4d-0c8f-45f8-a656-c642d1e9e01e/inact_qc.png HTTP/1.1" 200 1188
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /media/filer_public/78/9d/789d2a34-cee9-468b-babe-f78844b8d943/inact_ml.png HTTP/1.1" 200 1486
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /static/instructscience/images/Bleft.png HTTP/1.1" 200 4907
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /static/instructscience/images/Bnext.png HTTP/1.1" 200 4856
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /media/filer_public/18/4c/184c4583-9775-460d-8d00-e50fdc007cc2/inact_cc.png HTTP/1.1" 200 895
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /media/filer_public/b9/8a/b98ac816-c630-4917-b776-23dd12594494/inact_gen.png HTTP/1.1" 200 1139
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Bold/Muli-Bold.woff HTTP/1.1" 200 42340
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-Regular/Muli-Regular.woff HTTP/1.1" 200 42212
+[28/Mar/2021 20:48:07] INFO [django.server:154] "GET /static/instructscience/fonts/Muli-SemiBold/Muli-SemiBold.woff HTTP/1.1" 200 42324
+[28/Mar/2021 20:48:21] INFO [django.server:154] "GET /blog/ HTTP/1.1" 200 32964
+[28/Mar/2021 20:48:21] INFO [django.server:154] "GET /static/instructscience/css/blogs.css HTTP/1.1" 200 13058
+[28/Mar/2021 20:48:21] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-select.css HTTP/1.1" 200 13312
+[28/Mar/2021 20:48:21] INFO [django.server:154] "GET /static/instructscience/css/mason.css HTTP/1.1" 200 9226
+[28/Mar/2021 20:48:21] INFO [django.server:154] "GET /static/instructscience/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11284
+[28/Mar/2021 20:48:21] INFO [django.server:154] "GET /static/instructscience/css/easyzoom.css HTTP/1.1" 200 953
+[28/Mar/2021 20:48:21] INFO [django.server:154] "GET /static/instructscience/css/fontawesome.min.css HTTP/1.1" 200 55757
+[28/Mar/2021 20:48:22] WARNING [django.request:228] Not Found: /blog/images/ic_scroll down.png
+[28/Mar/2021 20:48:22] WARNING [django.server:154] "GET /blog/images/ic_scroll%20down.png HTTP/1.1" 404 3529
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /static/instructscience/css/inspire.css HTTP/1.1" 200 7074
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /media/filer_public/20/63/206399f4-b51d-4b9b-a008-18c15a2b6443/blog2.png HTTP/1.1" 200 159520
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /media/filer_public/50/81/50818c27-2904-4a33-a23c-d23709762664/blog1.png HTTP/1.1" 200 187806
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /media/filer_public/bd/0b/bd0b5270-14e4-446f-8df5-af6c277c60c0/blog3.png HTTP/1.1" 200 203403
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /static/instructscience/images/arrow2.png HTTP/1.1" 200 234
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /static/instructscience/images/check_circle.svg HTTP/1.1" 200 265
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /static/instructscience/images/newsletter.png HTTP/1.1" 200 22273
+[28/Mar/2021 20:48:22] INFO [django.server:154] "GET /static/instructscience/images/ic_search.png HTTP/1.1" 200 487
+[28/Mar/2021 20:48:23] INFO [django.server:154] "GET /static/instructscience/images/blog--banner.png HTTP/1.1" 200 2717197
+[28/Mar/2021 20:49:06] WARNING [django.server:154] "GET /static/instructscience/js/jquery.min.map HTTP/1.1" 404 1837
+[28/Mar/2021 20:49:06] WARNING [django.server:154] "GET /static/instructscience/js/bootstrap.min.js.map HTTP/1.1" 404 1855
+[28/Mar/2021 20:49:06] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap.min.css.map HTTP/1.1" 404 1861
+[28/Mar/2021 20:49:06] WARNING [django.server:154] "GET /static/instructscience/css/bootstrap-select.css.map HTTP/1.1" 404 1870

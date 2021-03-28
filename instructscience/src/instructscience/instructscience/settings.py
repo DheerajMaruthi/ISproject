@@ -111,16 +111,16 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'hxxfmhng',
-#         'USER': 'hxxfmhng',
-#         'PASSWORD': 'An_3OCfa0Ym9-S947GKIYmqDOsi1dSQc',
-#         'HOST': 'satao.db.elephantsql.com',
-#         'PORT': '5432',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hxxfmhng',
+        'USER': 'hxxfmhng',
+        'PASSWORD': 'An_3OCfa0Ym9-S947GKIYmqDOsi1dSQc',
+        'HOST': 'satao.db.elephantsql.com',
+        'PORT': '5432',
+    }
+}
 
 # DATABASES = {
 #     'default': {
@@ -136,16 +136,16 @@ WSGI_APPLICATION = 'instructscience.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': INSTRUCT_DB_NAME,
-        'USER': INSTRUCT_DB_USER,
-        'PASSWORD': INSTRUCT_DB_PASSWORD,
-        'HOST': INSTRUCT_DB_HOST,
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': INSTRUCT_DB_NAME,
+#         'USER': INSTRUCT_DB_USER,
+#         'PASSWORD': INSTRUCT_DB_PASSWORD,
+#         'HOST': INSTRUCT_DB_HOST,
+#         'PORT': '5432',
+#     }
+# }
 
 SITE_ID = 1
 
