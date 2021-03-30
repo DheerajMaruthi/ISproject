@@ -304,16 +304,50 @@
 </div>
 {% endblock %}
 {% block scripts_page_specific %}
+
 <script type="text/javascript">
+        $(document).ready(function() {
+            $("#category").change(function() {
+                var newTheme = $(this).val();
+                $.ajax({
+                    type:"GET",
+                    url: "/blog/ajax_calls/filter/",
+                    data: {
+                        id:newTheme
+                    },
+                    success: function(result) {
+                      var response_data = result.topic_name;
+                        var i;
+                        // alert(response_data);
+                        var optionHtml = '<option value="">Select a Topic</option>';
+                                if(response_data.length>0){
+                                   $.each(response_data,function(i,e){
+                                       optionHtml+= '<option value="'+e+'">'+e+'</option>';
+                                   });
+                                }
+                                if(optionHtml !=''){
+                                    $('#topic').html(optionHtml);
+                                }
+                    }
+                });
+            });
+        });
+    </script>
+
+<script type="text/javascript">
+
 $(document).ready(function() {
-    $('.category--content  li a').on("click", function() {
-        var checkeddValue = $(this).attr('data-filter');
-        console.log(checkeddValue);
-        $('.category--content a.btn').removeClass('btn-cat-active');
-        $(this).addClass('btn-cat-active');
-        $('#nav-tab a').fadeOut();
-        $('.' + checkeddValue).fadeIn();
+  $("#topic").change(function(){
+      $(this).find("option:selected").each(function(){
+          var optionValue = $(this).attr("value");
+          if(optionValue){
+              $(".card--type--two").not("." + optionValue).hide();
+              $("#" + optionValue).show();
+          } else{
+              $(".card--type--two").hide();
+          }
       });
+  }).change();
 
    $('#submit_subscribe').on('click',function(){
      $(".subscribe_form").validate({
@@ -362,6 +396,20 @@ $(document).ready(function() {
    });
 });
 });
+
+$("#topic").change(function(){
+    $(this).find("option:selected").each(function(){
+        var optionValue = $(this).attr("value");
+        if(optionValue){
+            $(".card--type--two").not("." + optionValue).hide();
+            $("#" + optionValue).show();
+        } else{
+            $(".card--type--two").hide();
+        }
+    });
+}).change();
+
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/

@@ -7,9 +7,9 @@
 <!-- {% with total=feature|slice:"1:" %} -->
 <div class="tab-content" id="nav-tabContent">
 <!-- {% paginate 3 total %} -->
-{% for obj in total %}
-<div class="tab-pane  fade{% if forloop.first %} show active {% endif %}" id="cardtopic{{forloop.counter}}" role="tabpanel" aria-labelledby="cardtopic{{forloop.counter}}-tab">
-  <div class="card--type--two {{obj.blog_topic.blog_category}}">
+<div class="tab-pane active show fade" >
+  {% for obj in total %}
+  <div class="card--type--two " id="{{obj.blog_topic}}">
     <div class="row">
       <div class="card-img col-12 col-sm-12 col-md-12 col-lg-5 p-0">
         <a href="blogdetails.html" class="read--more">
@@ -39,13 +39,27 @@
       </div>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endfor %}
 </div>
 <!-- <a href="javascript:void(0)" class="load--more"> -->
 <!-- <div class="load--more">
   {% show_more "Load More" %}
 </div> -->
 <!-- </a> -->
+
+<script>
+  $("#topic").change(function(){
+      $(this).find("option:selected").each(function(){
+          var optionValue = $(this).attr("value");
+          if(optionValue){
+              $(".card--type--two").not("." + optionValue).hide();
+              $("#" + optionValue).show();
+          } else{
+              $(".card--type--two").hide();
+          }
+      });
+  }).change();
+</script>
 {% endwith %}
 {% endif %}

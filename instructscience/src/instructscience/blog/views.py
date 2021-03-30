@@ -140,3 +140,13 @@ def Blog_search(request, slug=None):
                         Q(search_friendly__icontains=q)
                         | Q(blog_title__icontains=q), published=1)
                 return render(request, 'blog/search_results.html', {'blog_object': results})
+
+
+def FilterView(request):
+    response_data = {}
+    id = request.GET.get('id')
+    response = models.BlogTopic.objects.filter(
+                published=True, blog_category__category=id)
+    print(response)
+    topic_name = [i.topic for i in response]
+    return HttpResponse(json.dumps({'topic_name': topic_name}), content_type='application/json')

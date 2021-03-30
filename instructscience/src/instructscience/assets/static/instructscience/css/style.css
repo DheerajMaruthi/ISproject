@@ -941,3 +941,6 @@ element.style {
     margin-bottom: 15px;
     margin-right: 10px;
 }
+.tab-pane > div {
+  margin-bottom: 20px;
+}

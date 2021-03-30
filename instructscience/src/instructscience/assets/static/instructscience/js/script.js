@@ -243,7 +243,17 @@ $(document).ready(function () {
     }
   });
 });
-
+$("#topic").change(function(){
+    $(this).find("option:selected").each(function(){
+        var optionValue = $(this).attr("value");
+        if(optionValue){
+            $(".card--type--two").not("." + optionValue).hide();
+            $("#" + optionValue).show();
+        } else{
+            $(".card--type--two").hide();
+        }
+    });
+}).change();
 $('#quote-carousel').owlCarousel({
   autoplay: true,
   center: true,

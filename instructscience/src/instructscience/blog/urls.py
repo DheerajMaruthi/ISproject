@@ -11,6 +11,7 @@ urlpatterns = [
     path('', views.Index.as_view(), name='index'),
     path('subscribe/', views.SubscriptionCreate, name='subscribe'),
     re_path(r'^ajax_calls/search/', views.autocompleteModel, name='search'),
+    re_path(r'^ajax_calls/filter/', views.FilterView, name='filter'),
     path('blog-search/', views.Blog_search, name='blog_search'),
     path('<slug:slug>/', views.BlogsDetailView.as_view(),
     name='blog_details'),
