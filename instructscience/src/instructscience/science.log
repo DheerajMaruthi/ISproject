@@ -18046,3 +18046,5 @@ django.db.utils.OperationalError: FATAL:  too many connections for role "hxxfmhn
 [03/Apr/2021 17:39:20] INFO [django.server:154] "GET /blog/ajax_calls/filter/?id=Category4 HTTP/1.1" 200 36
 [03/Apr/2021 17:39:25] INFO [django.server:154] "GET /blog/ajax_calls/filter/?id=Category5 HTTP/1.1" 200 37
 [03/Apr/2021 17:39:30] INFO [django.server:154] "GET /blog/ajax_calls/filter/?id=Category1 HTTP/1.1" 200 36
+[03/Apr/2021 17:47:43] INFO [django.utils.autoreload:203] /var/www/html/ISproject/instructscience/src/instructscience/instructscience/settings.py changed, reloading.
+[03/Apr/2021 17:47:45] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader
