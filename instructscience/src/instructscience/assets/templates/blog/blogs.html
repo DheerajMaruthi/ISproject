@@ -378,6 +378,9 @@ $("#topic").change(function(){
           .split(regex)
           .join('-');
 
+          console.log(optionValue);
+          console.log(a);
+
           if(a){
               $(".card--type--two").not("." + a).hide();
               $("#" + a).show();
