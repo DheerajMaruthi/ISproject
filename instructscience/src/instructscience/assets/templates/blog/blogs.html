@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="{% static 'instructscience/css/blogs.css' %}">
 <link rel="stylesheet" href="{% static 'instructscience/css/mason.css' %}">
 <link rel="stylesheet" href="{% static 'instructscience/css/inspire.css' %}">
+<link rel="stylesheet" href="{% static 'instructscience/css/example-styles.css' %}">
 {% endblock %}
 {% block content %}
 <div class="container-fluid relative" id="banner--wrapper" style="background:url('{% static 'instructscience/images/blog--banner.png' %}');">
@@ -60,14 +61,20 @@
                 </select>
               </div>
 
-              <div class="col-md-6 col-lg-6 col-sm-12 col-12">
-                <label for="topic">Topic</label>
-                <select class="form-control" id="topic">
+              <div class="col-md-6 col-lg-6 col-sm-12 col-12 new-multiple-dropdown">
+
+                <!-- <select class="form-control" id="topic" multiple>
                   {% for obj in topic %}
                        <option value="{{obj.topic}}">{{obj.topic}}</option>
                    {% endfor %}
-                </select>
-              </div>
+                </select> -->
+                    <label for="categories">Topic</label>
+                    <select id="categories" name="categories" class="form-control" multiple>
+                      {% for obj in topic %}
+                           <option value="{{obj.topic}}">{{obj.topic}}</option>
+                       {% endfor %}
+                    </select>
+                </div>
             </form>
 
             <div class="form d-none">
@@ -91,7 +98,7 @@
         </div>
       </div>
 
-      <!-- Ends Here -->
+
       <!-- Right Column -->
       <div class="col-lg-4 col-md-4 col-sm-12 col-12 right--bar">
         <div class="rightbar--one mb-5">
@@ -303,9 +310,30 @@
   </div>
 </div>
 {% endblock %}
+
 {% block scripts_page_specific %}
 
+<script type="text/javascript" src="{% static 'instructscience/js/jquery.multi-select.js' %}"></script>
+
 <script type="text/javascript">
+
+  $(function(){
+    $('#categories').multiSelect({
+      noneText: 'Topics',
+      presets: [
+      {
+          name: 'All categories',
+          all: false
+      },
+      {
+          name: 'My categories',
+          all:false,
+          options: ['a', 'c']
+      }
+      ]
+    });
+    });
+
         $(document).ready(function() {
             $("#category").change(function() {
                 var newTheme = $(this).val();
@@ -326,7 +354,7 @@
                                    });
                                 }
                                 if(optionHtml !=''){
-                                    $('#topic').html(optionHtml);
+                                    $('#categories').html(optionHtml);
                                 }
                     }
                 });
