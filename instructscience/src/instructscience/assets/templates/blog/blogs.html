@@ -62,18 +62,18 @@
               </div>
 
               <div class="col-md-6 col-lg-6 col-sm-12 col-12 new-multiple-dropdown">
-
-                <!-- <select class="form-control" id="topic" multiple>
+                <label for="categories">Topic</label>
+                <select class="form-control" id="topic">
                   {% for obj in topic %}
                        <option value="{{obj.topic}}">{{obj.topic}}</option>
                    {% endfor %}
-                </select> -->
-                    <label for="categories">Topic</label>
-                    <select id="categories" name="categories" class="form-control" multiple>
+                </select>
+
+                    <!-- <select id="categories" name="categories" class="form-control" multiple>
                       {% for obj in topic %}
                            <option value="{{obj.topic}}">{{obj.topic}}</option>
                        {% endfor %}
-                    </select>
+                    </select> -->
                 </div>
             </form>
 
@@ -119,9 +119,10 @@
               {% endfor %}
             </ul>
           </div>
-          {% endcomment %}
 
         </div>
+        {% endcomment %}
+
         <div class="recent--blogs mb-5">
           <h3>Most Recent</h3>
           <div class="blogs--content">
@@ -354,7 +355,7 @@
                                    });
                                 }
                                 if(optionHtml !=''){
-                                    $('#categories').html(optionHtml);
+                                    $('#topic').html(optionHtml);
                                 }
                     }
                 });
@@ -365,6 +366,7 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
+
   $("#topic").change(function(){
       $(this).find("option:selected").each(function(){
           var optionValue = $(this).attr("value");
@@ -424,18 +426,6 @@ $(document).ready(function() {
    });
 });
 });
-
-$("#topic").change(function(){
-    $(this).find("option:selected").each(function(){
-        var optionValue = $(this).attr("value");
-        if(optionValue){
-            $(".card--type--two").not("." + optionValue).hide();
-            $("#" + optionValue).show();
-        } else{
-            $(".card--type--two").hide();
-        }
-    });
-}).change();
 
 
 function autocomplete(inp, arr) {
