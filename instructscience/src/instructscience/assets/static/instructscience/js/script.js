@@ -245,16 +245,26 @@ $(document).ready(function () {
 });
 
 $("#topic").change(function(){
-    $(this).find("option:selected").each(function(){
-        var optionValue = $(this).attr("value");
-        if(optionValue){
-            $(".card--type--two").not("." + optionValue).hide();
-            $("#" + optionValue).show();
-        } else{
-            $(".card--type--two").hide();
-        }
-    });
-}).change();
+      $(this).find("option:selected").each(function(){
+          var optionValue = $(this).attr("value");
+          var regex = /\s+/g
+          var a = optionValue
+          .toLowerCase()
+          .trim()
+          .split(regex)
+          .join('-');
+
+          console.log(optionValue);
+          console.log(a);
+
+          if(a){
+              $(".card--type--two").not("." + a).hide();
+              $("#" + a).show();
+          } else{
+              $(".card--type--two").hide();
+          }
+      });
+  }).change();
 
 $('#quote-carousel').owlCarousel({
   autoplay: true,
