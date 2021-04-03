@@ -9,7 +9,7 @@
 <!-- {% paginate 3 total %} -->
 <div class="tab-pane active show fade" >
   {% for obj in total %}
-  <div class="card--type--two " id="{{obj.blog_topic}}">
+  <div class="card--type--two " id="{{obj.blog_topic|slugify}}">
     <div class="row">
       <div class="card-img col-12 col-sm-12 col-md-12 col-lg-5 p-0">
         <a href="blogdetails.html" class="read--more">
